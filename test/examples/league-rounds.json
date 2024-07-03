@@ -1,0 +1,810 @@
+{
+  "previousRounds": {
+    "1": [
+      {
+        "home": "Internacional",
+        "away": "Bahia",
+        "winner": "Internacional",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Cruzeiro",
+        "away": "Botafogo",
+        "winner": "Cruzeiro",
+        "score": { "home": 3, "away": 2 }
+      },
+      {
+        "home": "Vitoria",
+        "away": "Palmeiras",
+        "winner": "Palmeiras",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Fluminense",
+        "away": "RB Bragantino",
+        "winner": "RB Bragantino",
+        "score": { "home": 2, "away": 2 }
+      },
+      {
+        "home": "Vasco DA Gama",
+        "away": "Gremio",
+        "winner": "Vasco DA Gama",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Corinthians",
+        "away": "Atletico-MG",
+        "winner": "Atletico-MG",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "Sao Paulo",
+        "away": "Fortaleza EC",
+        "winner": "Fortaleza EC",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Atletico Paranaense",
+        "away": "Cuiaba",
+        "winner": "Atletico Paranaense",
+        "score": { "home": 4, "away": 0 }
+      },
+      {
+        "home": "Atletico Goianiense",
+        "away": "Flamengo",
+        "winner": "Flamengo",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Criciuma",
+        "away": "Juventude",
+        "winner": "Juventude",
+        "score": { "home": 1, "away": 1 }
+      }
+    ],
+    "2": [
+      {
+        "home": "Gremio",
+        "away": "Atletico Paranaense",
+        "winner": "Gremio",
+        "score": { "home": 2, "away": 0 }
+      },
+      {
+        "home": "Atletico-MG",
+        "away": "Criciuma",
+        "winner": "Criciuma",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Bahia",
+        "away": "Fluminense",
+        "winner": "Bahia",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Flamengo",
+        "away": "Sao Paulo",
+        "winner": "Flamengo",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Botafogo",
+        "away": "Atletico Goianiense",
+        "winner": "Botafogo",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Palmeiras",
+        "away": "Internacional",
+        "winner": "Internacional",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "RB Bragantino",
+        "away": "Vasco DA Gama",
+        "winner": "RB Bragantino",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Fortaleza EC",
+        "away": "Cruzeiro",
+        "winner": "Cruzeiro",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Cuiaba",
+        "away": "Vitoria",
+        "winner": "Vitoria",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "Juventude",
+        "away": "Corinthians",
+        "winner": "Juventude",
+        "score": { "home": 2, "away": 0 }
+      }
+    ],
+    "3": [
+      {
+        "home": "Gremio",
+        "away": "Cuiaba",
+        "winner": "Gremio",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Atletico-MG",
+        "away": "Cruzeiro",
+        "winner": "Atletico-MG",
+        "score": { "home": 3, "away": 0 }
+      },
+      {
+        "home": "Vitoria",
+        "away": "Bahia",
+        "winner": "Bahia",
+        "score": { "home": 2, "away": 2 }
+      },
+      {
+        "home": "Fluminense",
+        "away": "Vasco DA Gama",
+        "winner": "Fluminense",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Botafogo",
+        "away": "Juventude",
+        "winner": "Botafogo",
+        "score": { "home": 5, "away": 1 }
+      },
+      {
+        "home": "Palmeiras",
+        "away": "Flamengo",
+        "winner": "Flamengo",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "RB Bragantino",
+        "away": "Corinthians",
+        "winner": "RB Bragantino",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Atletico Paranaense",
+        "away": "Internacional",
+        "winner": "Atletico Paranaense",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Atletico Goianiense",
+        "away": "Sao Paulo",
+        "winner": "Sao Paulo",
+        "score": { "home": 0, "away": 3 }
+      },
+      {
+        "home": "Criciuma",
+        "away": "Fortaleza EC",
+        "winner": "Fortaleza EC",
+        "score": { "home": null, "away": null }
+      }
+    ],
+    "4": [
+      {
+        "home": "Internacional",
+        "away": "Atletico Goianiense",
+        "winner": "Atletico Goianiense",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Cruzeiro",
+        "away": "Vitoria",
+        "winner": "Cruzeiro",
+        "score": { "home": 3, "away": 1 }
+      },
+      {
+        "home": "Bahia",
+        "away": "Gremio",
+        "winner": "Bahia",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Flamengo",
+        "away": "Botafogo",
+        "winner": "Botafogo",
+        "score": { "home": 0, "away": 2 }
+      },
+      {
+        "home": "Vasco DA Gama",
+        "away": "Criciuma",
+        "winner": "Criciuma",
+        "score": { "home": 0, "away": 4 }
+      },
+      {
+        "home": "Corinthians",
+        "away": "Fluminense",
+        "winner": "Corinthians",
+        "score": { "home": 3, "away": 0 }
+      },
+      {
+        "home": "Sao Paulo",
+        "away": "Palmeiras",
+        "winner": "Palmeiras",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "Fortaleza EC",
+        "away": "RB Bragantino",
+        "winner": "RB Bragantino",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Cuiaba",
+        "away": "Atletico-MG",
+        "winner": "Atletico-MG",
+        "score": { "home": 0, "away": 3 }
+      },
+      {
+        "home": "Juventude",
+        "away": "Atletico Paranaense",
+        "winner": "Atletico Paranaense",
+        "score": { "home": 1, "away": 1 }
+      }
+    ],
+    "5": [
+      {
+        "home": "Gremio",
+        "away": "Criciuma",
+        "winner": "Criciuma",
+        "score": { "home": null, "away": null }
+      },
+      {
+        "home": "Cruzeiro",
+        "away": "Internacional",
+        "winner": "Internacional",
+        "score": { "home": null, "away": null }
+      },
+      {
+        "home": "Vitoria",
+        "away": "Sao Paulo",
+        "winner": "Sao Paulo",
+        "score": { "home": 1, "away": 3 }
+      },
+      {
+        "home": "Fluminense",
+        "away": "Atletico-MG",
+        "winner": "Atletico-MG",
+        "score": { "home": 2, "away": 2 }
+      },
+      {
+        "home": "Botafogo",
+        "away": "Bahia",
+        "winner": "Bahia",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Corinthians",
+        "away": "Fortaleza EC",
+        "winner": "Fortaleza EC",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "RB Bragantino",
+        "away": "Flamengo",
+        "winner": "Flamengo",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Atletico Paranaense",
+        "away": "Vasco DA Gama",
+        "winner": "Atletico Paranaense",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Cuiaba",
+        "away": "Palmeiras",
+        "winner": "Palmeiras",
+        "score": { "home": 0, "away": 2 }
+      },
+      {
+        "home": "Juventude",
+        "away": "Atletico Goianiense",
+        "winner": "Juventude",
+        "score": { "home": 1, "away": 0 }
+      }
+    ],
+    "6": [
+      {
+        "home": "Internacional",
+        "away": "Juventude",
+        "winner": "Juventude",
+        "score": { "home": null, "away": null }
+      },
+      {
+        "home": "Atletico-MG",
+        "away": "Gremio",
+        "winner": "Gremio",
+        "score": { "home": null, "away": null }
+      },
+      {
+        "home": "Bahia",
+        "away": "RB Bragantino",
+        "winner": "Bahia",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Flamengo",
+        "away": "Corinthians",
+        "winner": "Flamengo",
+        "score": { "home": 2, "away": 0 }
+      },
+      {
+        "home": "Vasco DA Gama",
+        "away": "Vitoria",
+        "winner": "Vasco DA Gama",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Palmeiras",
+        "away": "Atletico Paranaense",
+        "winner": "Atletico Paranaense",
+        "score": { "home": 0, "away": 2 }
+      },
+      {
+        "home": "Sao Paulo",
+        "away": "Fluminense",
+        "winner": "Sao Paulo",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Fortaleza EC",
+        "away": "Botafogo",
+        "winner": "Botafogo",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Atletico Goianiense",
+        "away": "Cruzeiro",
+        "winner": "Cruzeiro",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Criciuma",
+        "away": "Cuiaba",
+        "winner": "Cuiaba",
+        "score": { "home": 2, "away": 5 }
+      }
+    ],
+    "7": [
+      {
+        "home": "Gremio",
+        "away": "RB Bragantino",
+        "winner": "RB Bragantino",
+        "score": { "home": 0, "away": 2 }
+      },
+      {
+        "home": "Atletico-MG",
+        "away": "Bahia",
+        "winner": "Bahia",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Vitoria",
+        "away": "Atletico Goianiense",
+        "winner": "Atletico Goianiense",
+        "score": { "home": 0, "away": 2 }
+      },
+      {
+        "home": "Fluminense",
+        "away": "Juventude",
+        "winner": "Juventude",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Vasco DA Gama",
+        "away": "Flamengo",
+        "winner": "Flamengo",
+        "score": { "home": 1, "away": 6 }
+      },
+      {
+        "home": "Corinthians",
+        "away": "Botafogo",
+        "winner": "Botafogo",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Sao Paulo",
+        "away": "Cruzeiro",
+        "winner": "Sao Paulo",
+        "score": { "home": 2, "away": 0 }
+      },
+      {
+        "home": "Fortaleza EC",
+        "away": "Atletico Paranaense",
+        "winner": "Fortaleza EC",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Cuiaba",
+        "away": "Internacional",
+        "winner": "Internacional",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Criciuma",
+        "away": "Palmeiras",
+        "winner": "Palmeiras",
+        "score": { "home": 1, "away": 2 }
+      }
+    ],
+    "8": [
+      {
+        "home": "Internacional",
+        "away": "Sao Paulo",
+        "winner": "Sao Paulo",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "Cruzeiro",
+        "away": "Cuiaba",
+        "winner": "Cruzeiro",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Bahia",
+        "away": "Fortaleza EC",
+        "winner": "Bahia",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Flamengo",
+        "away": "Gremio",
+        "winner": "Flamengo",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Botafogo",
+        "away": "Fluminense",
+        "winner": "Botafogo",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Palmeiras",
+        "away": "Vasco DA Gama",
+        "winner": "Palmeiras",
+        "score": { "home": 2, "away": 0 }
+      },
+      {
+        "home": "RB Bragantino",
+        "away": "Atletico-MG",
+        "winner": "Atletico-MG",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Atletico Paranaense",
+        "away": "Criciuma",
+        "winner": "Atletico Paranaense",
+        "score": { "home": 3, "away": 1 }
+      },
+      {
+        "home": "Atletico Goianiense",
+        "away": "Corinthians",
+        "winner": "Corinthians",
+        "score": { "home": 2, "away": 2 }
+      },
+      {
+        "home": "Juventude",
+        "away": "Vitoria",
+        "winner": "Vitoria",
+        "score": { "home": 1, "away": 1 }
+      }
+    ],
+    "9": [
+      {
+        "home": "Gremio",
+        "away": "Botafogo",
+        "winner": "Botafogo",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Atletico-MG",
+        "away": "Palmeiras",
+        "winner": "Palmeiras",
+        "score": { "home": 0, "away": 4 }
+      },
+      {
+        "home": "Vitoria",
+        "away": "Internacional",
+        "winner": "Vitoria",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Fluminense",
+        "away": "Atletico Goianiense",
+        "winner": "Atletico Goianiense",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Vasco DA Gama",
+        "away": "Cruzeiro",
+        "winner": "Cruzeiro",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "Corinthians",
+        "away": "Sao Paulo",
+        "winner": "Sao Paulo",
+        "score": { "home": 2, "away": 2 }
+      },
+      {
+        "home": "RB Bragantino",
+        "away": "Juventude",
+        "winner": "RB Bragantino",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Atletico Paranaense",
+        "away": "Flamengo",
+        "winner": "Flamengo",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Cuiaba",
+        "away": "Fortaleza EC",
+        "winner": "Cuiaba",
+        "score": { "home": 5, "away": 0 }
+      },
+      {
+        "home": "Criciuma",
+        "away": "Bahia",
+        "winner": "Bahia",
+        "score": { "home": 2, "away": 2 }
+      }
+    ],
+    "10": [
+      {
+        "home": "Internacional",
+        "away": "Corinthians",
+        "winner": "Internacional",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Cruzeiro",
+        "away": "Fluminense",
+        "winner": "Cruzeiro",
+        "score": { "home": 2, "away": 0 }
+      },
+      {
+        "home": "Vitoria",
+        "away": "Atletico-MG",
+        "winner": "Vitoria",
+        "score": { "home": 4, "away": 2 }
+      },
+      {
+        "home": "Flamengo",
+        "away": "Bahia",
+        "winner": "Flamengo",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Botafogo",
+        "away": "Atletico Paranaense",
+        "winner": "Atletico Paranaense",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Palmeiras",
+        "away": "RB Bragantino",
+        "winner": "Palmeiras",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Sao Paulo",
+        "away": "Cuiaba",
+        "winner": "Cuiaba",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Fortaleza EC",
+        "away": "Gremio",
+        "winner": "Fortaleza EC",
+        "score": { "home": 1, "away": 0 }
+      },
+      {
+        "home": "Atletico Goianiense",
+        "away": "Criciuma",
+        "winner": "Criciuma",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Juventude",
+        "away": "Vasco DA Gama",
+        "winner": "Juventude",
+        "score": { "home": 2, "away": 0 }
+      }
+    ],
+    "11": [
+      {
+        "home": "Gremio",
+        "away": "Internacional",
+        "winner": "Internacional",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Atletico-MG",
+        "away": "Fortaleza EC",
+        "winner": "Fortaleza EC",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Bahia",
+        "away": "Cruzeiro",
+        "winner": "Bahia",
+        "score": { "home": 4, "away": 1 }
+      },
+      {
+        "home": "Fluminense",
+        "away": "Flamengo",
+        "winner": "Flamengo",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Vasco DA Gama",
+        "away": "Sao Paulo",
+        "winner": "Vasco DA Gama",
+        "score": { "home": 4, "away": 1 }
+      },
+      {
+        "home": "Palmeiras",
+        "away": "Juventude",
+        "winner": "Palmeiras",
+        "score": { "home": 3, "away": 1 }
+      },
+      {
+        "home": "RB Bragantino",
+        "away": "Vitoria",
+        "winner": "RB Bragantino",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Atletico Paranaense",
+        "away": "Corinthians",
+        "winner": "Corinthians",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Cuiaba",
+        "away": "Atletico Goianiense",
+        "winner": "Atletico Goianiense",
+        "score": { "home": 0, "away": 0 }
+      },
+      {
+        "home": "Criciuma",
+        "away": "Botafogo",
+        "winner": "Criciuma",
+        "score": { "home": 2, "away": 1 }
+      }
+    ],
+    "12": [
+      {
+        "home": "Internacional",
+        "away": "Atletico-MG",
+        "winner": "Atletico-MG",
+        "score": { "home": 1, "away": 2 }
+      },
+      {
+        "home": "Cruzeiro",
+        "away": "Atletico Paranaense",
+        "winner": "Cruzeiro",
+        "score": { "home": 2, "away": 0 }
+      },
+      {
+        "home": "Bahia",
+        "away": "Vasco DA Gama",
+        "winner": "Bahia",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Fluminense",
+        "away": "Vitoria",
+        "winner": "Vitoria",
+        "score": { "home": 0, "away": 1 }
+      },
+      {
+        "home": "Botafogo",
+        "away": "RB Bragantino",
+        "winner": "Botafogo",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Corinthians",
+        "away": "Cuiaba",
+        "winner": "Cuiaba",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Sao Paulo",
+        "away": "Criciuma",
+        "winner": "Sao Paulo",
+        "score": { "home": 2, "away": 1 }
+      },
+      {
+        "home": "Fortaleza EC",
+        "away": "Palmeiras",
+        "winner": "Fortaleza EC",
+        "score": { "home": 3, "away": 0 }
+      },
+      {
+        "home": "Atletico Goianiense",
+        "away": "Gremio",
+        "winner": "Gremio",
+        "score": { "home": 1, "away": 1 }
+      },
+      {
+        "home": "Juventude",
+        "away": "Flamengo",
+        "winner": "Juventude",
+        "score": { "home": 2, "away": 1 }
+      }
+    ]
+  },
+  "nextRound": [
+    {
+      "home": "Gremio",
+      "away": "Fluminense",
+      "winner": "Fluminense",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Atletico-MG",
+      "away": "Atletico Goianiense",
+      "winner": "Atletico Goianiense",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Vitoria",
+      "away": "Atletico Paranaense",
+      "winner": "Atletico Paranaense",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Flamengo",
+      "away": "Cruzeiro",
+      "winner": "Cruzeiro",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Vasco DA Gama",
+      "away": "Botafogo",
+      "winner": "Botafogo",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Palmeiras",
+      "away": "Corinthians",
+      "winner": "Corinthians",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Sao Paulo",
+      "away": "Bahia",
+      "winner": "Bahia",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Fortaleza EC",
+      "away": "Juventude",
+      "winner": "Juventude",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Cuiaba",
+      "away": "RB Bragantino",
+      "winner": "RB Bragantino",
+      "score": { "home": null, "away": null }
+    },
+    {
+      "home": "Criciuma",
+      "away": "Internacional",
+      "winner": "Internacional",
+      "score": { "home": null, "away": null }
+    }
+  ]
+}

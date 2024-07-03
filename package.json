@@ -1,0 +1,22 @@
+{
+  "name": "football-predict",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js --es-module-specifier-resolution=node",
+    "round14": "ROUND=14 URL_GE=https://ge.globo.com/espiao-estatistico/noticia/2024/07/02/favoritismos-14-dicas-palpites-e-chances-de-vencer-no-brasileirao.ghtml URL_UFMG=https://www.mat.ufmg.br/futebol/tabela-da-proxima-rodada_seriea/ node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "ejs": "^3.1.10",
+    "puppeteer": "^22.12.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
