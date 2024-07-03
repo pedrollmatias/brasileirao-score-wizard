@@ -1,0 +1,47 @@
+<div class="page">
+  <div class="content-padding">
+    <h2>
+      <strong>
+        4. Próximo confronto: <%= home.name %> x <%= away.name %> - Rodada <%=
+        round %>
+      </strong>
+    </h2>
+
+    <!-- Informações -->
+    <ul>
+      <li><strong>Mandante</strong>: <%= home.name %></li>
+      <li><strong>Visitante</strong>: <%= away.name %></li>
+    </ul>
+
+    <!-- Análise qualitativa -->
+    <h3>
+      <strong>Análise qualitativa</strong>
+    </h3>
+
+    <% if (match.geAnalysis) { %>
+    <p><strong>Favorito:</strong> <%= match.geAnalysis.favoriteTeam.name %></p>
+
+    <p><%= match.geAnalysis.analysis %></p>
+
+    <span>Fonte: <strong>Portal Globo Esporte</strong></span>
+    <% } else { %>
+    <p>Não disponível para o confronto</p>
+    <% } %>
+
+    <!-- Desfalques -->
+    <% if (match.injuries?.length) { %>
+    <h3>Desfalques</h3>
+
+    <ul>
+      <% for (const [teamName, players] of Object.entries(match.injuries)) { %>
+      <li>
+        <strong
+          ><%= teamName %>: <% players.forEach(player => { %> <%= player %>; <%
+          }) %>
+        </strong>
+      </li>
+      <% } %>
+    </ul>
+    <% } %>
+  </div>
+</div>

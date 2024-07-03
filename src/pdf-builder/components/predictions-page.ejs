@@ -1,0 +1,68 @@
+<div class="page">
+  <div class="content-padding">
+    <h2>
+      <strong>5. Previsões para o confronto</strong>
+    </h2>
+
+    <!-- Informações -->
+    <p>
+      As previsões dos resultados são feitas baseadas em estudos que levam em
+      consideração diversos fatores relevantes sobre a partida, como mando de
+      campo, histórico dos times no campeonato, últimas partidas, classificação,
+      dentre outros.
+    </p>
+
+    <p>
+      As previsões mostram a chance de cada um dos times ganhar a partida, bem
+      como a chance de empate entre eles. Estes são dados muito importantes que
+      devem ser levados em consideração quando deseja-se prever o resultado de
+      um confronto, pois fornece uma base sólida.
+    </p>
+
+    <!-- Previsão API Football -->
+    <h3>Previsão API Football</h3>
+
+    <% if (match.apiFootballPrediction) { %>
+    <ul>
+      <li>
+        <strong>Vitória do <%= match.home.name %></strong>: <%=
+        match.apiFootballPrediction.prediction.percent.home %>
+      </li>
+      <li>
+        <strong>Vitória do <%= match.away.name %></strong>: <%=
+        match.apiFootballPrediction.prediction.percent.away %>
+      </li>
+      <li>
+        <strong>Empate</strong>: <%=
+        match.apiFootballPrediction.prediction.percent.draw %>
+      </li>
+    </ul>
+
+    <% } else { %>
+    <p>Não disponível para o confronto</p>
+    <% } %>
+
+    <!-- Previsão UFMG -->
+    <h3>Previsão UFMG</h3>
+
+    <% if (match.ufmgPrediction) { %>
+    <ul>
+      <li>
+        <strong>Vitória do <%= match.home.name %></strong>: <%=
+        match.ufmgPrediction.prediction.percent.home %>
+      </li>
+      <li>
+        <strong>Vitória do <%= match.away.name %></strong>: <%=
+        match.ufmgPrediction.prediction.percent.away %>
+      </li>
+      <li>
+        <strong>Empate</strong>: <%=
+        match.ufmgPrediction.prediction.percent.draw %>
+      </li>
+    </ul>
+
+    <% } else { %>
+    <p>Não disponível para o confronto</p>
+    <% } %>
+  </div>
+</div>
