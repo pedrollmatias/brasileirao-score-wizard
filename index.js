@@ -14,6 +14,7 @@ import {
 } from "./src/crawler.js";
 
 import { pdfBuilder } from "./src/pdf-builder/builder.js";
+import { generateAiPromptFile } from "./src/ai-prompt-builder.js";
 
 const runPrompt = async () => {
   const season = await new Promise((resolve) => {
@@ -23,7 +24,7 @@ const runPrompt = async () => {
     });
 
     rl.question(
-      "Qual a temporada do campeonato? (Ex: 2023, 2024...)",
+      "Qual a temporada do campeonato? (Ex: 2023, 2024...)\n",
       (answer) => {
         rl.close();
         resolve(answer);
@@ -38,7 +39,7 @@ const runPrompt = async () => {
     });
 
     rl.question(
-      "Qual a próxima rodada do campenado? (Ex: 3, 15, 38)",
+      "Qual a próxima rodada do campenado? (Ex: 3, 15, 38)\n",
       (answer) => {
         rl.close();
         resolve(answer);
@@ -53,7 +54,7 @@ const runPrompt = async () => {
     });
 
     rl.question(
-      `Qual a URL da análise da rodada do Globo Esporte "Favoritismo #${round}"? A matéria será utilizada como fonte para análise qualitativa dos confrontos`,
+      `Qual a URL da análise da rodada do Globo Esporte (Favoritismo #${round}")? A matéria será utilizada como fonte para análise qualitativa dos confrontos\n`,
       (answer) => {
         rl.close();
         resolve(answer);
@@ -68,7 +69,7 @@ const runPrompt = async () => {
     });
 
     rl.question(
-      `Qual a URL da UFMG contendo as previsões da rodada?`,
+      `Qual a URL da UFMG contendo as previsões da rodada?\n`,
       (answer) => {
         rl.close();
         resolve(answer);
@@ -85,19 +86,19 @@ const runPrompt = async () => {
 };
 
 const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
-  if (season) {
+  if (!season) {
     throw new Error("Temporada não definida");
   }
 
-  if (round) {
+  if (!round) {
     throw new Error("Rodada não definida");
   }
 
-  if (urlGe) {
+  if (!urlGe) {
     console.warn("URL Globo Esporte não definida");
   }
 
-  if (urlUfmg) {
+  if (!urlUfmg) {
     console.warn("URL UFMG não definida");
   }
 
@@ -193,11 +194,14 @@ const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
 };
 
 (async () => {
-  console.log("** Iniciando geraçao dos relatórios **");
+  console.log("** Brasileirão Score Wizard **");
 
   const { season, round, urlGe, urlUfmg } = await runPrompt();
+
+  console.log("** Iniciando geraçao dos relatórios **");
+
   const matches = await buildReport({ season, round, urlGe, urlUfmg });
-  await runAiPrimptBuilder({ season, round, matches });
+  await generateAiPromptFile({ season, round, matches });
 
   console.log("** Relatórios gerados com sucesso! **");
 })();

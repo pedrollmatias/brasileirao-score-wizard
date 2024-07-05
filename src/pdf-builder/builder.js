@@ -76,11 +76,15 @@ export const pdfBuilder = async ({
 
   const dir = path.join(__dirname, "../../output");
   const filename =
-    `l${league}-s${season}-r${round}-${home.name.toLowerCase()}-x-${away.name.toLowerCase()}`
+    `l${league}-s${season}-r${round}-${home.name.toLowerCase()}-x-${away.name.toLowerCase()}.pdf`
       .trim()
       .replace(" ", "-");
 
-  await fsPromises.writeFile(path.join(__dirname, dir, filename), pdf);
+  if (!fs.existsSync(dir)) {
+    await fsPromises.mkdir(dir, { recursive: true });
+  }
+
+  await fsPromises.writeFile(path.join(dir, filename), pdf);
 };
 
 const splitArrayIntoGroups = (array, groupSize) => {
@@ -102,6 +106,8 @@ const htmlToPdf = async (report) => {
       }),
       headless: true,
     });
+
+    const page = await browser.newPage();
 
     await page.setContent(report, { waitUntil: "networkidle2" });
 
