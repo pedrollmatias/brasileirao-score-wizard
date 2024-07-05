@@ -1,4 +1,4 @@
-# football-predict
+# brasileirao-score-wizard
 Geração de relatórios de previsão de resultados de confrontos entre times do Brasileirão Série A, utilizados como input para análise por ferramentas de IA.
 
 ## Introdução
