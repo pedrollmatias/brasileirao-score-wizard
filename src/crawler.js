@@ -51,7 +51,9 @@ export const getGloboEsporteMatchAnalysis = async ({ url, home, away }) => {
   }
 
   const browser = await puppeteer.launch({
-    executablePath: process.env.CHROMIUM_EXECUTABLE_PATH || "/usr/bin/chromium-browser",
+    ...(process.env.BROWSER_EXECUTABLE_PATH && {
+      executablePath: process.env.BROWSER_EXECUTABLE_PATH,
+    }),
     headless: true,
   });
   const page = await browser.newPage();
@@ -107,7 +109,9 @@ export const getUfmgMatchPrediction = async ({ url, home, away }) => {
   }
 
   const browser = await puppeteer.launch({
-    executablePath: "/usr/bin/chromium-browser",
+    ...(process.env.BROWSER_EXECUTABLE_PATH && {
+      executablePath: process.env.BROWSER_EXECUTABLE_PATH,
+    }),
     headless: true,
   });
   const page = await browser.newPage();

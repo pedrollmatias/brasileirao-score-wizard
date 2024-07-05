@@ -97,8 +97,9 @@ const htmlToPdf = async (report) => {
 
   try {
     browser = await puppeteer.launch({
-      executablePath:
-        process.env.CHROMIUM_EXECUTABLE_PATH || "/usr/bin/chromium-browser",
+      ...(process.env.BROWSER_EXECUTABLE_PATH && {
+        executablePath: process.env.BROWSER_EXECUTABLE_PATH,
+      }),
       headless: true,
     });
 

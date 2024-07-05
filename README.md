@@ -41,6 +41,15 @@ API_FOOTBALL_API_KEY=YOUR_API_KEY
 
 ```
 
+A depender do seu ambiente, você pode precisar especificar o path do executável do Chrome/Chormium, já que a geração do PDF utiliza o [!puppeteer](https://www.npmjs.com/package/puppeteer)
+```
+## .env
+
+API_FOOTBALL_API_KEY=YOUR_API_KEY
+BROWSER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
+```
+
 
 ## Utilização
 
