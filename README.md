@@ -53,4 +53,4 @@ Insira as informações e os relatórios serão gerados na pasta `output` da ra�
 
 ## Demo e exemplos
 
-Veja alguns exemplos de relatórios gerados para rodadas e campeonatos anteriores dentro da pasta [examples](https://www.api-football.com/)
+Veja alguns exemplos de relatórios gerados para rodadas e campeonatos anteriores dentro da pasta [examples](https://github.com/pedrollmatias/brasileirao-score-wizard/tree/main/examples)
