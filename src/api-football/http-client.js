@@ -2,9 +2,9 @@ import axios from "axios";
 
 const getHttpClient = () => {
   return axios.create({
-    baseURL: process.env.API_FOOTBALL_HOST,
+    baseURL: "https://v3.football.api-sports.io/",
     headers: {
-      "x-rapidapi-host": process.env.API_FOOTBALL_API_HOST,
+      "x-rapidapi-host": "v3.football.api-sports.io/",
       "x-rapidapi-key": process.env.API_FOOTBALL_API_KEY,
     },
   });
