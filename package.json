@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js --es-module-specifier-resolution=node",
-    "round14": "ROUND=14 URL_GE=https://ge.globo.com/espiao-estatistico/noticia/2024/07/02/favoritismos-14-dicas-palpites-e-chances-de-vencer-no-brasileirao.ghtml URL_UFMG=https://www.mat.ufmg.br/futebol/tabela-da-proxima-rodada_seriea/ node index.js"
+    "start": "node index.js --es-module-specifier-resolution=node"
   },
   "keywords": [],
   "author": "",

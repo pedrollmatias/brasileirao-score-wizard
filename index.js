@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-import { teamSquadValues } from "./src/data/2024/team-squad-values.js";
+import readline from "readline";
 
 import { LeaguesEnum, teamNameMap } from "./src/api-football/constants.js";
 import { getLeagueStanding } from "./src/api-football/get-league-standing.js";
@@ -15,22 +15,97 @@ import {
 
 import { pdfBuilder } from "./src/pdf-builder/builder.js";
 
-const buildReport = async () => {
-  if (!process.env.ROUND) {
-    throw new Error("ROUND is not defined");
+const runPrompt = async () => {
+  const season = await new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.question(
+      "Qual a temporada do campeonato? (Ex: 2023, 2024...)",
+      (answer) => {
+        rl.close();
+        resolve(answer);
+      }
+    );
+  });
+
+  const round = await new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.question(
+      "Qual a próxima rodada do campenado? (Ex: 3, 15, 38)",
+      (answer) => {
+        rl.close();
+        resolve(answer);
+      }
+    );
+  });
+
+  const urlGe = await new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.question(
+      `Qual a URL da análise da rodada do Globo Esporte "Favoritismo #${round}"? A matéria será utilizada como fonte para análise qualitativa dos confrontos`,
+      (answer) => {
+        rl.close();
+        resolve(answer);
+      }
+    );
+  });
+
+  const urlUfmg = await new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.question(
+      `Qual a URL da UFMG contendo as previsões da rodada?`,
+      (answer) => {
+        rl.close();
+        resolve(answer);
+      }
+    );
+  });
+
+  return {
+    season: Number(season),
+    round: Number(round),
+    urlGe,
+    urlUfmg,
+  };
+};
+
+const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
+  if (season) {
+    throw new Error("Temporada não definida");
   }
 
-  if (!process.env.URL_GE) {
-    console.log("URL_GE is not defined");
+  if (round) {
+    throw new Error("Rodada não definida");
   }
 
-  if (!process.env.URL_UFMG) {
-    console.log("URL_GE is not defined");
+  if (urlGe) {
+    console.warn("URL Globo Esporte não definida");
   }
 
-  const season = Number(process.env.SEASON) || 2024;
-  const round = Number(process.env.ROUND);
+  if (urlUfmg) {
+    console.warn("URL UFMG não definida");
+  }
+
   const league = LeaguesEnum.BRASILEIRAO_SERIE_A;
+
+  const { teamSquadValues } = await import(
+    `./src/data/${season}/team-squad-values.js`
+  );
 
   const standing = await getLeagueStanding({ league, season });
   const { previousRounds, nextRound } = await getLeagueRounds({
@@ -48,6 +123,10 @@ const buildReport = async () => {
       id: match.away.id,
       name: teamNameMap[match.away.id],
     };
+
+    console.log(
+      `Gerando relatório para partida entre ${home.name} x ${away.name}...`
+    );
 
     const geAnalysis = process.env.URL_GE
       ? await getGloboEsporteMatchAnalysis({
@@ -110,9 +189,15 @@ const buildReport = async () => {
     });
   }
 
-  console.log("Relatórios gerados com sucesso");
+  return nextRound.map(({ home, away }) => ({ home, away }));
 };
 
 (async () => {
-  await buildReport();
+  console.log("** Iniciando geraçao dos relatórios **");
+
+  const { season, round, urlGe, urlUfmg } = await runPrompt();
+  const matches = await buildReport({ season, round, urlGe, urlUfmg });
+  await runAiPrimptBuilder({ season, round, matches });
+
+  console.log("** Relatórios gerados com sucesso! **");
 })();

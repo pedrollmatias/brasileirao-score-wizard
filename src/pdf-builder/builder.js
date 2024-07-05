@@ -2,6 +2,7 @@ import path, { dirname } from "path";
 import ejs from "ejs";
 import fs from "fs";
 import { fileURLToPath } from "url";
+import puppeteer from "puppeteer";
 
 const fsPromises = fs.promises;
 const __filename = fileURLToPath(import.meta.url);
@@ -67,26 +68,44 @@ export const pdfBuilder = async ({
     ${metricsInfoPage}
   `;
 
-  const report = await ejs.renderFile(
+  const htmlReport = await ejs.renderFile(
     path.join(__dirname, "./components/wrapper.ejs"),
     { content }
   );
+  const pdf = await htmlToPdf(htmlReport);
 
-  // TODO: dir and zip
-  await fsPromises.writeFile(
-    path.join(
-      __dirname,
-      `../../l${league}-s${season}-r${round}-${home.name.toLowerCase()}-x-${away.name.toLowerCase()}.html`
-    ),
-    report
-  );
+  const dir = path.join(__dirname, "../../output");
+  const filename =
+    `l${league}-s${season}-r${round}-${home.name.toLowerCase()}-x-${away.name.toLowerCase()}`
+      .trim()
+      .replace(" ", "-");
+
+  await fsPromises.writeFile(path.join(__dirname, dir, filename), pdf);
 };
 
-function splitArrayIntoGroups(array, groupSize) {
+const splitArrayIntoGroups = (array, groupSize) => {
   return array.reduce((acc, _, index) => {
     if (index % groupSize === 0) {
       acc.push(array.slice(index, index + groupSize));
     }
     return acc;
   }, []);
-}
+};
+
+const htmlToPdf = async (report) => {
+  let browser;
+
+  try {
+    browser = await puppeteer.launch({
+      executablePath:
+        process.env.CHROMIUM_EXECUTABLE_PATH || "/usr/bin/chromium-browser",
+      headless: true,
+    });
+
+    await page.setContent(report, { waitUntil: "networkidle2" });
+
+    return page.pdf();
+  } catch {
+    browser && (await browser.close());
+  }
+};
