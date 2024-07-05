@@ -19,7 +19,7 @@ Para uma rodada, a ferramenta gera 10 relatórios (um para cada confronto), cont
 
 Além dos relatórios, também são gerados os prompts (perguntas) para serem feitas na ferramenta de IA de sua preferência **(ChatGPT 4o+, Google Gemini 1.6 Pro+, etc)**, para extrair a melhor resposta.
 
-Basta colocar o relatório do confronto como input, fazer a pergunta e __violá__ ✨: Você tem uma previsão já considerando todos dados, acontecimentos e estatísticas geradas para você
+Basta colocar o relatório do confronto como input, fazer a pergunta e _voilà_ ✨: Você tem uma previsão já considerando todos dados, acontecimentos e estatísticas geradas para você
 
 
 # Setup
