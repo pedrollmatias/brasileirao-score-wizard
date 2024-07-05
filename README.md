@@ -22,7 +22,7 @@ Além dos relatórios, também são gerados os prompts (perguntas) para serem fe
 Basta colocar o relatório do confronto como input, fazer a pergunta e _voilà_ ✨: Você tem uma previsão já considerando todos dados, acontecimentos e estatísticas geradas para você
 
 
-# Setup
+## Setup
 
 Instale as dependências do projeto:
 
