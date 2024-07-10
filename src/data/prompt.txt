@@ -1,14 +1,4 @@
-import path, { dirname } from "path";
-import fs from "fs";
-import { fileURLToPath } from "url";
-
-const fsPromises = fs.promises;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-export const generateAiPromptFile = async ({ matches, round, season }) => {
-  const content = matches.reduce((str, match) => {
-    const matchPrompt = `Analise detalhadamente o relatório informado, me dê o seu palpite sobre o confronto entre ${match.home.name} x ${match.away.name}, válido pela rodada ${round} do campeonato brasileiro série A ${season}. O palpite deve conter a chance do time mandante vencer, a chance do visitante vencer e a chance de empate.
+Analise detalhadamente o relatório informado, me dê o seu palpite sobre o confronto entre os times, válido para a próxima rodada do campeonato brasileiro série A. O palpite deve conter a chance do time mandante vencer, a chance do visitante vencer e a chance de empate.
 
 Para uma análise mais acertiva, considere todas as informações presentes no relatório e correlacione-as.
 
@@ -21,17 +11,3 @@ Observe as previsões do API Football e da UFMG, relacione-as com os demais dado
 Considerem também o desempenho do time como mandante e como visitante. Analise as rodadas anteriores e o desempenho dos times como visitante e mandante, para então avaliar essa métrica com a informação de mando de campo do confronto. Lembre-se que desempenho como mandante e visitante são distintos.
 
 Me dê uma resposta com sua justificativa do porque você decidiu por tais porcentagens, e como você ponderou as métricas para gerar as porcentagens.
-  `;
-
-    return `${str}    
-    ${matchPrompt}
-    
-    ---
-
-    `;
-  }, "");
-
-  const filePath = path.join(__dirname, "../output/ai-prompt.txt");
-
-  await fsPromises.writeFile(filePath, content);
-};

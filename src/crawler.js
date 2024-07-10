@@ -7,7 +7,7 @@ const teamNameGloboEsporteMap = {
   [TeamIdEnum.ATLETICO_MG]: "Atlético-MG",
   [TeamIdEnum.BAHIA]: "Bahia",
   [TeamIdEnum.BOTAFOGO]: "Botafogo",
-  [TeamIdEnum.CORINTHIANS]: "Corintians",
+  [TeamIdEnum.CORINTHIANS]: "Corinthians",
   [TeamIdEnum.CRICIUMA]: "Criciúma",
   [TeamIdEnum.CRUZEIRO]: "Cruzeiro",
   [TeamIdEnum.CUIABA]: "Cuiabá",
@@ -20,7 +20,7 @@ const teamNameGloboEsporteMap = {
   [TeamIdEnum.PALMEIRAS]: "Palmeiras",
   [TeamIdEnum.SAO_PAULO]: "São Paulo",
   [TeamIdEnum.VASCO_DA_GAMA]: "Vasco",
-  [TeamIdEnum.VITORIA]: "Vitoria",
+  [TeamIdEnum.VITORIA]: "Vitória",
 };
 
 const teamNameUfmgMap = {

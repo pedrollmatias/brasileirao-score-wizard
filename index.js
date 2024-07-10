@@ -129,9 +129,9 @@ const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
       `Gerando relatório para partida entre ${home.name} x ${away.name}...`
     );
 
-    const geAnalysis = process.env.URL_GE
+    const geAnalysis = urlGe
       ? await getGloboEsporteMatchAnalysis({
-          url: process.env.URL_GE,
+          url: urlGe,
           home,
           away,
         })
@@ -140,9 +140,9 @@ const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
     const apiFootballPrediction = await getMatchPrediction({
       fixtureId: match.fixtureId,
     });
-    const ufmgPrediction = process.env.URL_GE
+    const ufmgPrediction = urlUfmg
       ? await getUfmgMatchPrediction({
-          url: process.env.URL_UFMG,
+          url: urlUfmg,
           home,
           away,
         })
@@ -189,19 +189,17 @@ const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
       previousRounds: teamsPreviousRounds,
     });
   }
-
-  return nextRound.map(({ home, away }) => ({ home, away }));
 };
 
 (async () => {
   console.log("** Brasileirão Score Wizard **");
 
   const { season, round, urlGe, urlUfmg } = await runPrompt();
+  
 
   console.log("** Iniciando geraçao dos relatórios **");
 
-  const matches = await buildReport({ season, round, urlGe, urlUfmg });
-  await generateAiPromptFile({ season, round, matches });
+  await buildReport({ season, round, urlGe, urlUfmg });
 
   console.log("** Relatórios gerados com sucesso! **");
 })();

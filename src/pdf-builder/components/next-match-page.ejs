@@ -29,19 +29,15 @@
     <% } %>
 
     <!-- Desfalques -->
-    <% if (match.injuries?.length) { %>
     <h3>Desfalques</h3>
 
     <ul>
       <% for (const [teamName, players] of Object.entries(match.injuries)) { %>
       <li>
-        <strong
-          ><%= teamName %>: <% players.forEach(player => { %> <%= player %>; <%
-          }) %>
-        </strong>
+        <strong><%= teamName %></strong>: <% (players?.length ? players :
+        ['N/A']).forEach(player => { %> <%= player %>; <% }) %>
       </li>
       <% } %>
     </ul>
-    <% } %>
   </div>
 </div>

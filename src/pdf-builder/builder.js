@@ -78,7 +78,7 @@ export const pdfBuilder = async ({
   const filename =
     `l${league}-s${season}-r${round}-${home.name.toLowerCase()}-x-${away.name.toLowerCase()}.pdf`
       .trim()
-      .replace(" ", "-");
+      .replace(/\s+/g, '-')
 
   if (!fs.existsSync(dir)) {
     await fsPromises.mkdir(dir, { recursive: true });
