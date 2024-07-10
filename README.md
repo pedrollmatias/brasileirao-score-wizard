@@ -4,16 +4,16 @@ Geração de relatórios de previsão de resultados de confrontos entre times do
 ## Introdução
 
 E se você pudesse prever (e não chutar) os resultados de partidas de rodadas do Brasileirão série A que ainda vão acontecer? E se você tivesse um mini-super-poder de saber o futuro da próxima rodada do Brasileirão?
-Você não precisa de nenhum super poder, essa ferramente existe para isso. ~~Na verdade não é isso tudo.~~
+Você não precisa de nenhum super poder, essa ferramente existe para isso. ~~Na verdade, não é isso tudo.~~
 
-Utilizando a tecnologia das IAs a seu favor, essa ferramenta gera relatórios para cada um dos confrontos entre os times da próxima rodada do Campeoado Brasileiro, que servirão como base para que as IAs analisem, cruzem informações relevantes, pondere as métricas e façam suas previsões baseadas em análises qualitativas e quantitativas.
+Utilizando a tecnologia das IAs a seu favor, essa ferramenta gera relatórios para cada um dos confrontos entre os times da próxima rodada do Campeonato Brasileiro, que servirão como base para que as IAs analisem, cruzem informações relevantes, pondere as métricas e façam suas previsões baseadas em análises qualitativas e quantitativas.
 
 Para uma rodada, a ferramenta gera 10 relatórios (um para cada confronto), contendo:
 - Avaliação do elenco
 - Classificação dos times na tabela
 - Desempenho nas rodadas anteriores
 - Análise qualitativa do confronto pelos colunistas do portal Globo Esporte
-- Defalques
+- Desfalques
 - Previsão do resultado acordo com o departamento de estatística da UFMG
 - Previsão do resultado acordo com a plataforma API Football
 

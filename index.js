@@ -14,7 +14,6 @@ import {
 } from "./src/crawler.js";
 
 import { pdfBuilder } from "./src/pdf-builder/builder.js";
-import { generateAiPromptFile } from "./src/ai-prompt-builder.js";
 
 const runPrompt = async () => {
   const season = await new Promise((resolve) => {
