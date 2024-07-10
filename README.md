@@ -17,7 +17,7 @@ Para uma rodada, a ferramenta gera 10 relatórios (um para cada confronto), cont
 - Previsão do resultado acordo com o departamento de estatística da UFMG
 - Previsão do resultado acordo com a plataforma API Football
 
-Além dos relatórios, também são gerados os prompts (perguntas) para serem feitas na ferramenta de IA de sua preferência **(ChatGPT 4o+, Google Gemini 1.6 Pro+, etc)**, para extrair a melhor resposta.
+Utilize o [prompt](https://github.com/pedrollmatias/brasileirao-score-wizard/tree/main/src/data/prompt.txt) (comando) para ser usado na ferramenta de IA de sua preferência **(ChatGPT 4o+, Google Gemini 1.6 Pro+, etc)**, para extrair a melhor resposta.
 
 Basta colocar o relatório do confronto como input, fazer a pergunta e _voilà_ ✨: Você tem uma previsão já considerando todos dados, acontecimentos e estatísticas geradas para você
 
