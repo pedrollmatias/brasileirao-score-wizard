@@ -50,7 +50,9 @@ const runPrompt = async () => {
   };
 };
 
-const buildReport = async ({ season, leagueId }) => {};
+const buildReport = async ({ season, leagueId }) => {
+  const 
+};
 
 (async () => {
   console.log("** Brasileirão Match Wizard **\n");
