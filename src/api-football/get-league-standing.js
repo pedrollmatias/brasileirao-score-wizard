@@ -1,9 +1,9 @@
 import { httpClient } from "./http-client.js";
 
-export const getLeagueStanding = async ({ league, season }) => {
-  const { data } = await httpClient.get(
-    `standings?league=${league}&season=${season}`
-  );
+export const getLeagueStanding = async ({ leagueId, season }) => {
+  const { data } = await httpClient.get("standings", {
+    params: { league: leagueId, season },
+  });
 
   const [_league] = data.response;
   const { standings } = _league.league;

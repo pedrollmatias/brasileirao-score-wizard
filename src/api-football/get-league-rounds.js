@@ -1,23 +1,20 @@
 import { httpClient } from "./http-client.js";
 
-export const getLeagueRounds = async ({
-  league,
-  season,
-  round,
-}) => {
+export const getLeagueRounds = async ({ leagueId, season, round }) => {
   if (!round) {
     throw new Error("Round is required");
   }
 
-  const { data } = await httpClient.get(
-    `fixtures?league=${league}&season=${season}`
-  );
+  const { data } = await httpClient.get("fixtures", {
+    params: { league: leagueId, season },
+  });
 
   const { response: matches } = data;
 
   const previousRounds = matches
     .filter((match) => roundToNumber(match.league.round) < round)
     .map((match) => ({
+      fixtureId: match.fixture.id,
       round: roundToNumber(match.league.round),
       home: match.teams.home,
       away: match.teams.away,
@@ -31,7 +28,7 @@ export const getLeagueRounds = async ({
         away: match.goals.away ?? 0,
       },
     }))
-    .sort((a, b) => b.round - a.round)
+    .sort((a, b) => a.round - b.round)
     .reduce((acc, match) => {
       const { round, ..._match } = match;
 

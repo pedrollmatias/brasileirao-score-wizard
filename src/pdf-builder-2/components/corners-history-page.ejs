@@ -1,0 +1,64 @@
+<div class="page">
+  <div class="content-padding">
+    <h2>
+      <strong> 6. Histórico de escanteios </strong>
+    </h2>
+
+    <h3><strong><%= home.name %></strong></h3>
+
+    <% matches.forEach(match => { %>
+
+    <strong><%= match.home.name %> x <%= match.away.name %></strong>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Gols</th>
+          <th>Finalizações</th>
+          <th>Chutes ao gol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= match.score.home %></td>
+          <td>Gols</td>
+          <td><%= match.score.away %></td>
+        </tr>
+
+        <tr>
+          <td><%= match.home.shots.total %></td>
+          <td>Finalizações</td>
+          <td><%= match.away.shots.total %></td>
+        </tr>
+
+        <tr>
+          <td><%= match.home.shots.total %></td>
+          <td>Finalizações</td>
+          <td><%= match.away.shots.total %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <strong>Principais finalizadores</strong>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Gols</th>
+          <th>Finalizações</th>
+          <th>Chutes ao gol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= match.score.home %></td>
+          <td>Gols</td>
+          <td><%= match.score.away %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <% }) %>
+  </div>
+</div>

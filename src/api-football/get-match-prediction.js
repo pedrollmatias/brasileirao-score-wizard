@@ -1,7 +1,9 @@
 import { httpClient } from "./http-client.js";
 
 export const getMatchPrediction = async ({ fixtureId }) => {
-  const { data } = await httpClient.get(`predictions?fixture=${fixtureId}`);
+  const { data } = await httpClient.get("predictions", {
+    params: { fixture: fixtureId },
+  });
   const [response] = data.response;
 
   if (!response) {

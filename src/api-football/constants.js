@@ -1,5 +1,8 @@
 export const LeaguesEnum = {
   BRASILEIRAO_SERIE_A: 71,
+  BRASILEIRAO_SERIE_B: 71,
+  PREMIER_LEAGUE: 71,
+  LA_LIGA: 71,
 };
 
 export const TeamIdEnum = {
@@ -47,3 +50,37 @@ export const teamNameMap = {
   [TeamIdEnum.VASCO_DA_GAMA]: "Vasco da Gama",
   [TeamIdEnum.VITORIA]: "Vitória",
 };
+
+export const MatchStatisticsTypeEnum = {
+  SHOTS_ON_GOAL: "Shots on Goal",
+  SHOTS_OFF_GOAL: "Shots off Goal",
+  TOTAL_SHOTS: "Total Shots",
+  BLOCKED_SHOTS: "Blocked Shots",
+  SHOTS_INSIDEBOX: "Shots insidebox",
+  FOULS: "Fouls",
+  CORNER_KICKS: "Corner Kicks",
+  OFFSIDES: "Offsides",
+  BALL_POSSESSION: "Ball Possession",
+  YELLOW_CARDS: "Yellow Cards",
+  RED_CARDS: "Red Cards",
+  GOALKEEPER_SAVES: "Goalkeeper Saves",
+  TOTAL_PASSES: "Total passes",
+  PASSES_ACCURATE: "Passes accurate",
+  PASSES_PERCENTAGE: "Passes %",
+};
+
+// export const matchStatisticTypeMap = {
+//   [MatchStatisticsTypeEnum.SHOTS_ON_GOAL]: "Chutes ao gol",
+//   [MatchStatisticsTypeEnum.SHOTS_OFF_GOAL]: "Chutes fora do gol",
+//   [MatchStatisticsTypeEnum.TOTAL_SHOTS]: "Finalizações",
+//   [MatchStatisticsTypeEnum.BLOCKED_SHOTS]: "Chutes bloqueados",
+//   [MatchStatisticsTypeEnum.FOULS]: "Faltas",
+//   [MatchStatisticsTypeEnum.CORNER_KICKS]: "Escanteios",
+//   [MatchStatisticsTypeEnum.OFFSIDES]: "Impedimentos",
+//   [MatchStatisticsTypeEnum.BALL_POSSESSION]: "Posse de bola",
+//   [MatchStatisticsTypeEnum.YELLOW_CARDS]: "Cartões amarelos",
+//   [MatchStatisticsTypeEnum.RED_CARDS]: "Cartões vermelhos",
+//   [MatchStatisticsTypeEnum.GOALKEEPER_SAVES]: "Defesas importantes",
+//   [MatchStatisticsTypeEnum.TOTAL_PASSES]: "Passes",
+//   [MatchStatisticsTypeEnum.PASSES_ACCURATE]: "Porcentagem de passes corretos",
+// };

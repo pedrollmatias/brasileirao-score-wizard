@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js --es-module-specifier-resolution=node"
+    "score": "node index.js --es-module-specifier-resolution=node"
   },
   "keywords": [],
   "author": "",

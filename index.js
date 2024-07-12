@@ -101,15 +101,15 @@ const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
     console.warn("URL UFMG não definida");
   }
 
-  const league = LeaguesEnum.BRASILEIRAO_SERIE_A;
+  const leagueId = LeaguesEnum.BRASILEIRAO_SERIE_A;
 
   const { teamSquadValues } = await import(
     `./src/data/${season}/team-squad-values.js`
   );
 
-  const standing = await getLeagueStanding({ league, season });
+  const standing = await getLeagueStanding({ leagueId, season });
   const { previousRounds, nextRound } = await getLeagueRounds({
-    league,
+    leagueId,
     season,
     round,
   });

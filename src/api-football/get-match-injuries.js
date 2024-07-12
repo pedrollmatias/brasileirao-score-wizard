@@ -1,7 +1,9 @@
 import { httpClient } from "./http-client.js";
 
 export const getMatchInjuries = async ({ fixtureId }) => {
-  const { data } = await httpClient.get(`injuries?fixture=${fixtureId}`);
+  const { data } = await httpClient.get('injuries', {
+    params: { fixture: fixtureId },
+  });
 
   const players = data.response;
 
