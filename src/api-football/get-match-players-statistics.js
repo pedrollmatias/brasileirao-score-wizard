@@ -1,95 +1,65 @@
 import { httpClient } from "./http-client.js";
 
 export const getMatchPlayersStatistics = async ({
-  home: {
-    teamId: homeTeamId,
-    topScorers: homeTopScorers,
-    topShooters: homeTopShooters,
-    topYellowCards: homeTopYellowCards,
-    topRedCards: homeTopRedCards,
-    topFouls: homeTopFouls,
-  },
-  away: {
-    teamId: awayTeamId,
-    topScorers: awayTopScorers,
-    topShooters: awayTopShooters,
-    topYellowCards: awayTopYellowCards,
-    topRedCards: awayTopRedCards,
-    topFouls: awayTopFouls,
-  },
   fixtureId,
+  teamId,
+  mainPlayers,
 }) => {
   const { data } = await httpClient.get("fixtures/players", {
     params: { fixture: fixtureId },
   });
 
-  const teams = data.response;
-  const { away, home } = getHomeAndAway({ homeTeamId, awayTeamId, teams });
+  const { scorers, shooters, yellowCards, redCards, fouls } = mainPlayers;
 
-  const homeTopScorers = getTopScorersMatchGoals(home, homeTopScorers);
-  const awayTopScorers = getTopScorersMatchGoals(away, awayTopScorers);
-  const homeTopShooters = getTopShootersMatchShots(home, homeTopShooters);
-  const awayTopShooters = getTopShootersMatchShots(away, awayTopShooters);
-  const homeTopYellowCards = getTopYellowCardsMatchYellowCards(
-    home,
-    homeTopYellowCards
+  const teams = data.response;
+  const team = getMatchTeam({ teamId, teams });
+
+  const mainScorersMatchPerformance = getMainScorersMatchGoals(team, scorers);
+  const mainShootersMatchPerformance = getMainShootersMatchShots(
+    team,
+    shooters
   );
-  const awayTopYellowCards = getTopYellowCardsMatchYellowCards(
-    away,
-    awayTopYellowCards
+  const mainYellowCardsMatchPerformance = getMainYellowCardsMatchYellowCards(
+    team,
+    yellowCards
   );
-  const homeTopRedCards = getTopRedCardsMatchRedCards(home, homeTopRedCards);
-  const awayTopRedCards = getTopRedCardsMatchRedCards(away, awayTopRedCards);
-  const homeTopFouls = getTopFoulsMatchFouls(home, homeTopFouls);
-  const awayTopFouls = getTopFoulsMatchFouls(away, awayTopFouls);
+  const mainRedCardsMatchPerformance = getMainRedCardsMatchRedCards(
+    team,
+    redCards
+  );
+  const mainFoulsMatchPerformance = getMainFoulsMatchFouls(team, fouls);
 
   return {
-    home: {
-      teamId: homeTeamId,
-      name: home.team.name,
-      topScorers: homeTopScorers,
-      topShooters: homeTopShooters,
-      topYellowCards: homeTopYellowCards,
-      topRedCards: homeTopRedCards,
-      topFouls: homeTopFouls,
-    },
-    away: {
-      teamId: awayTeamId,
-      name: away.team.name,
-      topScorers: awayTopScorers,
-      topShooters: awayTopShooters,
-      topYellowCards: awayTopYellowCards,
-      topRedCards: awayTopRedCards,
-      topFouls: awayTopFouls,
+    team,
+    mainPlayers: {
+      scorers: mainScorersMatchPerformance,
+      shooters: mainShootersMatchPerformance,
+      yellowCards: mainYellowCardsMatchPerformance,
+      redCards: mainRedCardsMatchPerformance,
+      fouls: mainFoulsMatchPerformance,
     },
   };
 };
 
-const getHomeAndAway = ({ homeTeamId, teams }) => {
+const getMatchTeam = ({ teamId, teams }) => {
   const [team1, team2] = teams;
 
-  if (homeTeamId === team1.team.id) {
-    return {
-      home: team1,
-      away: team2,
-    };
+  if (teamId === team1.team.id) {
+    return team1;
   }
 
-  return {
-    home: team2,
-    away: team1,
-  };
+  return team2;
 };
 
-const getTopScorersMatchGoals = (team, topScorers) => {
+const getMainScorersMatchGoals = (team, mainScorers) => {
   const { players } = team;
-  const topScorersIds = topScorers.map(({ playerId }) => playerId);
+  const mainScorersIds = mainScorers.map(({ playerId }) => playerId);
 
-  const topScorers = players
-    .filter((player) => topScorersIds.includes(player.id))
-    .map((player) => {
+  return players
+    .filter(({ player }) => mainScorersIds.includes(player.id))
+    .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
-      const [stats] = player.statistics;
+      const [stats] = statistics;
       const goals = stats.goals;
 
       return {
@@ -100,15 +70,15 @@ const getTopScorersMatchGoals = (team, topScorers) => {
     });
 };
 
-const getTopShootersMatchShots = (team, topShooters) => {
+const getMainShootersMatchShots = (team, mainShooters) => {
   const { players } = team;
-  const topShootersIds = topShooters.map(({ playerId }) => playerId);
+  const mainShootersIds = mainShooters.map(({ playerId }) => playerId);
 
-  const topShooters = players
-    .filter((player) => topShootersIds.includes(player.id))
-    .map((player) => {
+  return players
+    .filter(({ player }) => mainShootersIds.includes(player.id))
+    .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
-      const [stats] = player.statistics;
+      const [stats] = statistics;
       const shots = stats.shots;
 
       return {
@@ -122,15 +92,15 @@ const getTopShootersMatchShots = (team, topShooters) => {
     });
 };
 
-const getTopYellowCardsMatchYellowCards = (team, topYellowCards) => {
+const getMainYellowCardsMatchYellowCards = (team, mainYellowCards) => {
   const { players } = team;
-  const topYellowCardsIds = topYellowCards.map(({ playerId }) => playerId);
+  const mainYellowCardsIds = mainYellowCards.map(({ playerId }) => playerId);
 
-  const topYellowCards = players
-    .filter((player) => topYellowCardsIds.includes(player.id))
-    .map((player) => {
+  return players
+    .filter(({ player }) => mainYellowCardsIds.includes(player.id))
+    .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
-      const [stats] = player.statistics;
+      const [stats] = statistics;
       const cards = stats.cards;
 
       return {
@@ -141,15 +111,15 @@ const getTopYellowCardsMatchYellowCards = (team, topYellowCards) => {
     });
 };
 
-const getTopRedCardsMatchRedCards = (team, topRedCards) => {
+const getMainRedCardsMatchRedCards = (team, mainRedCards) => {
   const { players } = team;
-  const topRedCardsIds = topRedCards.map(({ playerId }) => playerId);
+  const mainRedCardsIds = mainRedCards.map(({ playerId }) => playerId);
 
-  const topRedCards = players
-    .filter((player) => topRedCardsIds.includes(player.id))
-    .map((player) => {
+  return players
+    .filter(({ player }) => mainRedCardsIds.includes(player.id))
+    .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
-      const [stats] = player.statistics;
+      const [stats] = statistics;
       const cards = stats.cards;
 
       return {
@@ -160,15 +130,15 @@ const getTopRedCardsMatchRedCards = (team, topRedCards) => {
     });
 };
 
-const getTopFoulsMatchFouls = (team, topFouls) => {
+const getMainFoulsMatchFouls = (team, mainFouls) => {
   const { players } = team;
-  const topFoulsIds = topFouls.map(({ playerId }) => playerId);
+  const mainFoulsIds = mainFouls.map(({ playerId }) => playerId);
 
-  const topFouls = players
-    .filter((player) => topFoulsIds.includes(player.id))
-    .map((player) => {
+  return players
+    .filter(({ player }) => mainFoulsIds.includes(player.id))
+    .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
-      const [stats] = player.statistics;
+      const [stats] = statistics;
       const fouls = stats.fouls;
 
       return {

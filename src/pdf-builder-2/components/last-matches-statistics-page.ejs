@@ -1,7 +1,7 @@
 <div class="page">
   <div class="content-padding">
     <h2>
-      <strong> 6. Histórico de gols, finalizações e chutes no gol </strong>
+      <strong> 6. Estatísticas dos últimos confrontos </strong>
     </h2>
 
     <h3><strong><%= home.name %></strong></h3>
@@ -16,6 +16,11 @@
           <th>Gols</th>
           <th>Finalizações</th>
           <th>Chutes ao gol</th>
+          <th>Escanteios</th>
+          <th>Faltas</th>
+          <th>Cartões amarelos</th>
+          <th>Cartões vermelhos</th>
+          <th>Posse de bola</th>
         </tr>
       </thead>
       <tbody>
@@ -23,18 +28,6 @@
           <td><%= match.score.home %></td>
           <td>Gols</td>
           <td><%= match.score.away %></td>
-        </tr>
-
-        <tr>
-          <td><%= match.home.shots.total %></td>
-          <td>Finalizações</td>
-          <td><%= match.away.shots.total %></td>
-        </tr>
-
-        <tr>
-          <td><%= match.home.shots.total %></td>
-          <td>Finalizações</td>
-          <td><%= match.away.shots.total %></td>
         </tr>
       </tbody>
     </table>
@@ -52,9 +45,30 @@
       </thead>
       <tbody>
         <tr>
-          <td><%= match.score.home %></td>
+          <td><%= match.hom.home %></td>
           <td>Gols</td>
           <td><%= match.score.away %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <strong>Faltas</strong>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Gols</th>
+          <th>Finalizações</th>
+          <th>Chutes ao gol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jogador</td>
+          <td>Faltas cometidas</td>
+          <td>Cartões amarelos</td>
+          <td>Cartões vermelhos</td>
         </tr>
       </tbody>
     </table>

@@ -5,29 +5,57 @@ export const getTeamPlayersStatistics = async ({
   leagueId,
   season,
 }) => {
-  const { data } = await httpClient.get("players", {
-    params: { league: leagueId, season, team: teamId },
+  const { data } = await httpClient.get("players/squads", {
+    params: { team: teamId },
   });
-  const players = data.response;
 
-  const topScorers = getTopScorers(players);
-  const topShooters = getTopShooters(players);
-  const topYellowCards = getTopYellowCards(players);
-  const topRedCards = getTopRedCards(players);
-  const topFouls = getTopFouls(players);
+  const [{ players: squad }] = data.response;
+  const squadSize = squad.length;
+  const pageSize = 20;
+  const requestsAmount = Math.ceil(squadSize / pageSize);
+
+  const players = (
+    await Promise.all(
+      Array.from({ length: requestsAmount }).map(async (_, index) => {
+        const page = index + 1;
+        const { data } = await httpClient.get("players", {
+          params: { league: leagueId, season, team: teamId, page },
+        });
+
+        return data.response;
+      })
+    )
+  ).flat();
+
+  const mainScorers = getMainScorers(players);
+  const mainShooters = getMainShooters(players);
+  const mainYellowCards = getMainYellowCards(players);
+  const mainRedCards = getMainRedCards(players);
+  const mainFouls = getMainFouls(players);
+
 
   return {
-    teamId,
-    topScorers,
-    topShooters,
-    topYellowCards,
-    topRedCards,
-    topFouls,
+    team: {
+      id: teamId,
+    },
+    mainPlayers: {
+      scorers: mainScorers,
+      shooters: mainShooters,
+      yellowCards: mainYellowCards,
+      redCards: mainRedCards,
+      fouls: mainFouls,
+    },
   };
 };
 
-const getTopScorers = (players) => {
+const getMainScorers = (players) => {
   return players
+    .filter((player) => {
+      const [playerStats] = player.statistics;
+      const { goals } = playerStats;
+
+      return goals.total > 0;
+    })
     .sort((player1, player2) => {
       const [player1Stats] = player1.statistics;
       const [player2Stats] = player2.statistics;
@@ -42,17 +70,25 @@ const getTopScorers = (players) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const goals = playerStats.goals;
+      const { appearences } = playerStats.games;
+      const avg = ((goals.total ?? 0) / appearences).toFixed("1");
 
       return {
         playerId: id,
         name,
-        goals: goals.total ?? 0,
+        goals: { total: goals.total ?? 0, avg },
       };
     });
 };
 
-const getTopShooters = (players) => {
+const getMainShooters = (players) => {
   return players
+    .filter((player) => {
+      const [playerStats] = player.statistics;
+      const { shots } = playerStats;
+
+      return shots.total > 0;
+    })
     .sort((player1, player2) => {
       const [player1Stats] = player1.statistics;
       const [player2Stats] = player2.statistics;
@@ -67,20 +103,29 @@ const getTopShooters = (players) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const shots = playerStats.shots;
+      const { appearences } = playerStats.games;
+      const avgTotal = ((shots.total ?? 0) / appearences).toFixed("1");
+      const avgOn = ((shots.on ?? 0) / appearences).toFixed("1");
 
       return {
         playerId: id,
         name,
         shots: {
-          total: shots.total ?? 0,
-          on: shots.on ?? 0,
+          total: { total: shots.total ?? 0, avg: avgTotal },
+          on: { total: shots.on ?? 0, avg: avgOn },
         },
       };
     });
 };
 
-const getTopYellowCards = (players) => {
+const getMainYellowCards = (players) => {
   return players
+    .filter((player) => {
+      const [playerStats] = player.statistics;
+      const { cards } = playerStats;
+
+      return cards.yellow > 0;
+    })
     .sort((player1, player2) => {
       const [player1Stats] = player1.statistics;
       const [player2Stats] = player2.statistics;
@@ -95,17 +140,25 @@ const getTopYellowCards = (players) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const cards = playerStats.cards;
+      const { appearences } = playerStats.games;
+      const avg = ((cards.yellow ?? 0) / appearences).toFixed("1");
 
       return {
         playerId: id,
         name,
-        cards: cards.yellow ?? 0,
+        cards: { total: cards.yellow ?? 0, avg },
       };
     });
 };
 
-const getTopRedCards = (players) => {
+const getMainRedCards = (players) => {
   return players
+    .filter((player) => {
+      const [playerStats] = player.statistics;
+      const { cards } = playerStats;
+
+      return cards.red > 0;
+    })
     .sort((player1, player2) => {
       const [player1Stats] = player1.statistics;
       const [player2Stats] = player2.statistics;
@@ -120,17 +173,25 @@ const getTopRedCards = (players) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const cards = playerStats.cards;
+      const { appearences } = playerStats.games;
+      const avg = ((cards.red ?? 0) / appearences).toFixed("1");
 
       return {
         playerId: id,
         name,
-        cards: cards.red ?? 0,
+        cards: { total: cards.red ?? 0, avg },
       };
     });
 };
 
-const getTopFouls = (players) => {
+const getMainFouls = (players) => {
   return players
+    .filter((player) => {
+      const [playerStats] = player.statistics;
+      const { fouls } = playerStats;
+
+      return fouls.committed > 0;
+    })
     .sort((player1, player2) => {
       const [player1Stats] = player1.statistics;
       const [player2Stats] = player2.statistics;
@@ -145,11 +206,13 @@ const getTopFouls = (players) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const fouls = playerStats.fouls;
+      const { appearences } = playerStats.games;
+      const avg = ((fouls.committed ?? 0) / appearences).toFixed("1");
 
       return {
         playerId: id,
         name,
-        fouls: fouls.committed ?? 0,
+        fouls: { total: fouls.committed ?? 0, avg },
       };
     });
 };

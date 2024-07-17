@@ -30,11 +30,11 @@ export const getLeagueRounds = async ({ leagueId, season, round }) => {
     }))
     .sort((a, b) => a.round - b.round)
     .reduce((acc, match) => {
-      const { round, ..._match } = match;
+      const { round } = match;
 
       return {
         ...acc,
-        [round]: [...(acc[round] || []), _match],
+        [round]: [...(acc[round] || []), match],
       };
     }, {});
 

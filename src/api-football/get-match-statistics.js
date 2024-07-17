@@ -1,32 +1,37 @@
-import { MatchStatisticsTypeEnum, matchStatisticTypeMap } from "./constants.js";
+import { MatchStatisticsTypeEnum } from "./constants.js";
 import { httpClient } from "./http-client.js";
 
-export const getMatchStatistics = async ({ fixtureId }) => {
+export const getMatchStatistics = async ({ fixtureId, home }) => {
   const { data } = await httpClient.get("fixtures/statistics", {
     params: { fixture: fixtureId },
   });
 
   const teams = data.response;
-  const { away, home } = getHomeAndAway({ homeTeamId, awayTeamId, teams });
+
+  if (!teams.length) {
+    return;
+  }
+
+  const { away: _away, home: _home } = getHomeAndAway({ home, teams });
 
   return {
     home: {
-      teamId: home.team.id,
-      name: home.team.name,
-      ...getStatistics(home.statistics),
+      id: _away.team.id,
+      name: _away.team.name,
+      ...getStatistics(_away.statistics),
     },
     away: {
-      teamId: away.team.id,
-      name: away.team.name,
-      ...getStatistics(away.statistics),
+      id: _away.team.id,
+      name: _away.team.name,
+      ...getStatistics(_away.statistics),
     },
   };
 };
 
-const getHomeAndAway = ({ homeTeamId, teams }) => {
+const getHomeAndAway = ({ home, teams }) => {
   const [team1, team2] = teams;
 
-  if (homeTeamId === team1.team.id) {
+  if (home.id === team1.team.id) {
     return {
       home: team1,
       away: team2,

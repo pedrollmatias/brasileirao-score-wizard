@@ -26,8 +26,8 @@ export const getTeamStatistics = async ({ teamId, leagueId, season }) => {
     cards,
     form: form.split("").reverse(),
     biggest,
-    clean_sheet,
-    failed_to_score,
+    cleanSheet: clean_sheet,
+    failedToScore: failed_to_score,
     penalty,
     lineups,
   };
