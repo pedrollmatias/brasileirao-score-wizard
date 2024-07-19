@@ -4,6 +4,7 @@ export const getMatchPlayersStatistics = async ({
   fixtureId,
   teamId,
   mainPlayers,
+  injuries,
 }) => {
   const { data } = await httpClient.get("fixtures/players", {
     params: { fixture: fixtureId },
@@ -13,21 +14,33 @@ export const getMatchPlayersStatistics = async ({
 
   const teams = data.response;
   const team = getMatchTeam({ teamId, teams });
+  const injuriedPlayersIds = injuries.map(({ playerId }) => playerId);
 
-  const mainScorersMatchPerformance = getMainScorersMatchGoals(team, scorers);
-  const mainShootersMatchPerformance = getMainShootersMatchShots(
+  const mainScorersMatchPerformance = getMainScorersMatchGoals({
     team,
-    shooters
-  );
-  const mainYellowCardsMatchPerformance = getMainYellowCardsMatchYellowCards(
+    injuriedPlayersIds: injuriedPlayersIds,
+    mainPlayers: scorers,
+  });
+  const mainShootersMatchPerformance = getMainShootersMatchShots({
     team,
-    yellowCards
-  );
-  const mainRedCardsMatchPerformance = getMainRedCardsMatchRedCards(
+    injuriedPlayersIds: injuriedPlayersIds,
+    mainPlayers: shooters,
+  });
+  const mainYellowCardsMatchPerformance = getMainYellowCardsMatchYellowCards({
     team,
-    redCards
-  );
-  const mainFoulsMatchPerformance = getMainFoulsMatchFouls(team, fouls);
+    injuriedPlayersIds: injuriedPlayersIds,
+    mainPlayers: yellowCards,
+  });
+  const mainRedCardsMatchPerformance = getMainRedCardsMatchRedCards({
+    team,
+    injuriedPlayersIds: injuriedPlayersIds,
+    mainPlayers: redCards,
+  });
+  const mainFoulsMatchPerformance = getMainFoulsMatchFouls({
+    team,
+    injuriedPlayersIds: injuriedPlayersIds,
+    mainPlayers: fouls,
+  });
 
   return {
     team,
@@ -51,12 +64,20 @@ const getMatchTeam = ({ teamId, teams }) => {
   return team2;
 };
 
-const getMainScorersMatchGoals = (team, mainScorers) => {
+const getMainScorersMatchGoals = ({
+  team,
+  injuriedPlayersIds,
+  mainPlayers,
+}) => {
   const { players } = team;
-  const mainScorersIds = mainScorers.map(({ playerId }) => playerId);
+  const mainScorersIds = mainPlayers.map(({ playerId }) => playerId);
 
   return players
-    .filter(({ player }) => mainScorersIds.includes(player.id))
+    .filter(
+      ({ player }) =>
+        mainScorersIds.includes(player.id) &&
+        !injuriedPlayersIds.includes(player.id)
+    )
     .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
       const [stats] = statistics;
@@ -70,12 +91,20 @@ const getMainScorersMatchGoals = (team, mainScorers) => {
     });
 };
 
-const getMainShootersMatchShots = (team, mainShooters) => {
+const getMainShootersMatchShots = ({
+  team,
+  injuriedPlayersIds,
+  mainPlayers,
+}) => {
   const { players } = team;
-  const mainShootersIds = mainShooters.map(({ playerId }) => playerId);
+  const mainShootersIds = mainPlayers.map(({ playerId }) => playerId);
 
   return players
-    .filter(({ player }) => mainShootersIds.includes(player.id))
+    .filter(
+      ({ player }) =>
+        mainShootersIds.includes(player.id) &&
+        !injuriedPlayersIds.includes(player.id)
+    )
     .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
       const [stats] = statistics;
@@ -92,12 +121,20 @@ const getMainShootersMatchShots = (team, mainShooters) => {
     });
 };
 
-const getMainYellowCardsMatchYellowCards = (team, mainYellowCards) => {
+const getMainYellowCardsMatchYellowCards = ({
+  team,
+  injuriedPlayersIds,
+  mainPlayers,
+}) => {
   const { players } = team;
-  const mainYellowCardsIds = mainYellowCards.map(({ playerId }) => playerId);
+  const mainYellowCardsIds = mainPlayers.map(({ playerId }) => playerId);
 
   return players
-    .filter(({ player }) => mainYellowCardsIds.includes(player.id))
+    .filter(
+      ({ player }) =>
+        mainYellowCardsIds.includes(player.id) &&
+        !injuriedPlayersIds.includes(player.id)
+    )
     .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
       const [stats] = statistics;
@@ -111,12 +148,20 @@ const getMainYellowCardsMatchYellowCards = (team, mainYellowCards) => {
     });
 };
 
-const getMainRedCardsMatchRedCards = (team, mainRedCards) => {
+const getMainRedCardsMatchRedCards = ({
+  team,
+  injuriedPlayersIds,
+  mainPlayers,
+}) => {
   const { players } = team;
-  const mainRedCardsIds = mainRedCards.map(({ playerId }) => playerId);
+  const mainRedCardsIds = mainPlayers.map(({ playerId }) => playerId);
 
   return players
-    .filter(({ player }) => mainRedCardsIds.includes(player.id))
+    .filter(
+      ({ player }) =>
+        mainRedCardsIds.includes(player.id) &&
+        !injuriedPlayersIds.includes(player.id)
+    )
     .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
       const [stats] = statistics;
@@ -130,12 +175,16 @@ const getMainRedCardsMatchRedCards = (team, mainRedCards) => {
     });
 };
 
-const getMainFoulsMatchFouls = (team, mainFouls) => {
+const getMainFoulsMatchFouls = ({ team, injuriedPlayersIds, mainPlayers }) => {
   const { players } = team;
-  const mainFoulsIds = mainFouls.map(({ playerId }) => playerId);
+  const mainFoulsIds = mainPlayers.map(({ playerId }) => playerId);
 
   return players
-    .filter(({ player }) => mainFoulsIds.includes(player.id))
+    .filter(
+      ({ player }) =>
+        mainFoulsIds.includes(player.id) &&
+        !injuriedPlayersIds.includes(player.id)
+    )
     .map(({ player, statistics }) => {
       const { id: playerId, name } = player;
       const [stats] = statistics;

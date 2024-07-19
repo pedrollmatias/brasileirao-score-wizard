@@ -28,6 +28,11 @@ export const TeamIdEnum = {
   VITORIA: 136,
 };
 
+export const BookmakersEnum = {
+  BET_365: 8,
+  BETFAIR: 3,
+};
+
 export const teamNameMap = {
   [TeamIdEnum.ATHLETICO_PARANAENSE]: "Athletico Paranaense",
   [TeamIdEnum.ATLETICO_GOIANENSE]: "Atletico-GO",

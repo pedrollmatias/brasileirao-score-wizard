@@ -16,9 +16,9 @@ export const getMatchStatistics = async ({ fixtureId, home }) => {
 
   return {
     home: {
-      id: _away.team.id,
-      name: _away.team.name,
-      ...getStatistics(_away.statistics),
+      id: _home.team.id,
+      name: _home.team.name,
+      ...getStatistics(_home.statistics),
     },
     away: {
       id: _away.team.id,

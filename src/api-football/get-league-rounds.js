@@ -1,9 +1,11 @@
 import { httpClient } from "./http-client.js";
 
-export const getLeagueRounds = async ({ leagueId, season, round }) => {
-  if (!round) {
-    throw new Error("Round is required");
-  }
+export const getLeagueRounds = async ({ leagueId, season }) => {
+  const { data: dataRounds } = await httpClient.get("fixtures/rounds", {
+    params: { league: leagueId, season, current: true },
+  });
+  const [roundStr] = dataRounds.response;
+  const round = roundToNumber(roundStr);
 
   const { data } = await httpClient.get("fixtures", {
     params: { league: leagueId, season },
@@ -53,6 +55,7 @@ export const getLeagueRounds = async ({ leagueId, season, round }) => {
     }));
 
   return {
+    round,
     previousRounds,
     nextRound,
   };

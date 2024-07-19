@@ -194,7 +194,6 @@ const buildReport = async ({ season, round, urlGe, urlUfmg }) => {
   console.log("** Brasileirão Score Wizard **");
 
   const { season, round, urlGe, urlUfmg } = await runPrompt();
-  
 
   console.log("** Iniciando geraçao dos relatórios **");
 

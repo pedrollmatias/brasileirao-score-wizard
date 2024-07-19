@@ -1,23 +1,28 @@
 import { httpClient } from "./http-client.js";
 
+const mainPlayersAmount = Number(process.env.MAIN_PLAYERS_AMOUNT) || 5;
+
 export const getTeamPlayersStatistics = async ({
   teamId,
   leagueId,
   season,
 }) => {
-  const { data } = await httpClient.get("players/squads", {
-    params: { team: teamId },
+  // First page request
+  const { data } = await httpClient.get("players", {
+    params: { league: leagueId, season, team: teamId, page: 1 },
   });
 
-  const [{ players: squad }] = data.response;
-  const squadSize = squad.length;
-  const pageSize = 20;
-  const requestsAmount = Math.ceil(squadSize / pageSize);
+  const firstPlayers = data.response;
 
-  const players = (
+  const totalPages = data.paging.total;
+  const requestsAmount = totalPages - 1;
+
+  // Subsequent pages requests
+  const restPlayers = (
     await Promise.all(
       Array.from({ length: requestsAmount }).map(async (_, index) => {
-        const page = index + 1;
+        const firstRequestPage = 1;
+        const page = firstRequestPage + index + 1;
         const { data } = await httpClient.get("players", {
           params: { league: leagueId, season, team: teamId, page },
         });
@@ -27,12 +32,13 @@ export const getTeamPlayersStatistics = async ({
     )
   ).flat();
 
+  const players = [...firstPlayers, ...restPlayers];
+
   const mainScorers = getMainScorers(players);
   const mainShooters = getMainShooters(players);
   const mainYellowCards = getMainYellowCards(players);
   const mainRedCards = getMainRedCards(players);
   const mainFouls = getMainFouls(players);
-
 
   return {
     team: {
@@ -65,13 +71,13 @@ const getMainScorers = (players) => {
 
       return player2Goals.total - player1Goals.total;
     })
-    .slice(0, 3)
+    .slice(0, mainPlayersAmount)
     .map((player) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const goals = playerStats.goals;
       const { appearences } = playerStats.games;
-      const avg = ((goals.total ?? 0) / appearences).toFixed("1");
+      const avg = Number(((goals.total ?? 0) / appearences).toFixed("1"));
 
       return {
         playerId: id,
@@ -98,14 +104,14 @@ const getMainShooters = (players) => {
 
       return player2Shots.total - player1Shots.total;
     })
-    .slice(0, 5)
+    .slice(0, mainPlayersAmount)
     .map((player) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const shots = playerStats.shots;
       const { appearences } = playerStats.games;
-      const avgTotal = ((shots.total ?? 0) / appearences).toFixed("1");
-      const avgOn = ((shots.on ?? 0) / appearences).toFixed("1");
+      const avgTotal = Number(((shots.total ?? 0) / appearences).toFixed("1"));
+      const avgOn = Number(((shots.on ?? 0) / appearences).toFixed("1"));
 
       return {
         playerId: id,
@@ -135,13 +141,13 @@ const getMainYellowCards = (players) => {
 
       return player2Cards.yellow - player1Cards.yellow;
     })
-    .slice(0, 5)
+    .slice(0, mainPlayersAmount)
     .map((player) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const cards = playerStats.cards;
       const { appearences } = playerStats.games;
-      const avg = ((cards.yellow ?? 0) / appearences).toFixed("1");
+      const avg = Number(((cards.yellow ?? 0) / appearences).toFixed("1"));
 
       return {
         playerId: id,
@@ -168,13 +174,13 @@ const getMainRedCards = (players) => {
 
       return player2Cards.red - player1Cards.red;
     })
-    .slice(0, 5)
+    .slice(0, mainPlayersAmount)
     .map((player) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const cards = playerStats.cards;
       const { appearences } = playerStats.games;
-      const avg = ((cards.red ?? 0) / appearences).toFixed("1");
+      const avg = Number(((cards.red ?? 0) / appearences).toFixed("1"));
 
       return {
         playerId: id,
@@ -201,13 +207,13 @@ const getMainFouls = (players) => {
 
       return player2Fouls.committed - player1Fouls.committed;
     })
-    .slice(0, 5)
+    .slice(0, mainPlayersAmount)
     .map((player) => {
       const { id, name } = player.player;
       const [playerStats] = player.statistics;
       const fouls = playerStats.fouls;
       const { appearences } = playerStats.games;
-      const avg = ((fouls.committed ?? 0) / appearences).toFixed("1");
+      const avg = Number(((fouls.committed ?? 0) / appearences).toFixed("1"));
 
       return {
         playerId: id,
