@@ -1,0 +1,136 @@
+<div class="page">
+  <h5>
+    <strong>
+      2. Classificação do campeonato até a rodada atual - Rodada <%= round - 1
+      %>
+    </strong>
+  </h5>
+
+  <p>
+    A tabela a seguir mostra a classificação do campeonato até a rodada <%=
+    round - 1 %>, seguido dos confrons e resultados de cada uma das rodadas.
+  </p>
+
+  <p>
+    Times em posições acima na tabela tendem a vencer confrontos de times da
+    parte inferior, já que a classificação demonstra um histórico do time na
+    competição, refletindo a regularidade de um time no campeonato.
+  </p>
+
+  <table class="table table-sm table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Time</th>
+        <th>P</th>
+        <th>J</th>
+        <th>V</th>
+        <th>E</th>
+        <th>D</th>
+        <th>GP</th>
+        <th>GC</th>
+        <th>SG</th>
+        <th>%</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% standing.forEach(team => { %>
+      <tr>
+        <td><%= team.rank %></td>
+        <td>
+          <img
+            class="team-logo-sm me-2"
+            src="<%= team.team.logo %>"
+            alt="<%= team.team.name %>"
+          />
+          <%= team.team.name %>
+        </td>
+        <td><%= team.points %></td>
+        <td><%= team.played %></td>
+        <td><%= team.wins %></td>
+        <td><%= team.draws %></td>
+        <td><%= team.losses %></td>
+        <td><%= team.goals.for %></td>
+        <td><%= team.goals.against %></td>
+        <td><%= team.goals.difference %></td>
+        <td><%= team.efficiency %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+
+    <caption>
+      Legenda:
+      <strong>#</strong>
+      - Posição do time,
+      <strong>P</strong>
+      - Pontuação,
+      <strong>J</strong>
+      - Jogos,
+      <strong>V</strong>
+      - Vitorias,
+      <strong>E</strong>
+      - Empates,
+      <strong>D</strong>
+      - Derrotas,
+      <strong>GP</strong>
+      - Gols pro,
+      <strong>GC</strong>
+      - Gols contra,
+      <strong>SG</strong>
+      - Saldo de gols,
+      <strong>%</strong>
+      - Porcentagem de aproveitamento de pontos
+    </caption>
+  </table>
+</div>
+
+<div class="page">
+  <% previousRoundsEntries.forEach(([round, matches], index) => { %>
+  <div class="no-page-break">
+    <strong>Rodada <%= round %></strong>
+
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th>Mandante</th>
+          <th>Visitante</th>
+          <th>Placar</th>
+          <th>Vencedor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% matches.forEach(match => { %>
+        <tr>
+          <td>
+            <img
+              class="team-logo-sm me-2"
+              src="<%= match.home.logo %>"
+              alt="<%= match.home.name %>"
+            />
+            <%= match.home.name %>
+          </td>
+          <td>
+            <img
+              class="team-logo-sm me-2"
+              src="<%= match.away.logo %>"
+              alt="<%= match.away.name %>"
+            />
+            <%= match.away.name %>
+          </td>
+          <td><%= match.score.home %> x <%= match.score.away %></td>
+          <td>
+            <% if (match.winner) { %>
+            <img
+              class="team-logo-sm me-2"
+              src="<%= match.winner.logo %>"
+              alt="<%= match.winner.name %>"
+            />
+            <%=match.winner.name %> <% } else { %> N/A <% } %>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <% }) %>
+</div>

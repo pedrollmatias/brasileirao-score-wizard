@@ -1,1 +1,2666 @@
-{"round":18,"standing":[{"team":{"id":1958,"name":"Botafogo"},"rank":1,"points":39,"played":18,"wins":12,"losses":3,"draws":3,"goals":{"for":29,"against":14,"difference":15},"efficiency":72.22},{"team":{"id":1963,"name":"Palmeiras"},"rank":2,"points":36,"played":18,"wins":11,"losses":4,"draws":3,"goals":{"for":27,"against":13,"difference":14},"efficiency":66.67},{"team":{"id":5981,"name":"Flamengo"},"rank":3,"points":34,"played":17,"wins":10,"losses":3,"draws":4,"goals":{"for":30,"against":18,"difference":12},"efficiency":66.67},{"team":{"id":1981,"name":"São Paulo"},"rank":4,"points":30,"played":17,"wins":9,"losses":5,"draws":3,"goals":{"for":26,"against":18,"difference":8},"efficiency":58.82},{"team":{"id":1955,"name":"Bahia"},"rank":5,"points":30,"played":18,"wins":9,"losses":6,"draws":3,"goals":{"for":27,"against":22,"difference":5},"efficiency":55.56},{"team":{"id":1954,"name":"Cruzeiro"},"rank":6,"points":29,"played":17,"wins":9,"losses":6,"draws":2,"goals":{"for":23,"against":20,"difference":3},"efficiency":56.86},{"team":{"id":2020,"name":"Fortaleza"},"rank":7,"points":29,"played":16,"wins":8,"losses":3,"draws":5,"goals":{"for":19,"against":16,"difference":3},"efficiency":60.42},{"team":{"id":1967,"name":"Athletico"},"rank":8,"points":25,"played":16,"wins":7,"losses":5,"draws":4,"goals":{"for":20,"against":16,"difference":4},"efficiency":52.08},{"team":{"id":1977,"name":"Atlético Mineiro"},"rank":9,"points":25,"played":17,"wins":6,"losses":4,"draws":7,"goals":{"for":25,"against":25,"difference":0},"efficiency":49.02},{"team":{"id":1974,"name":"Vasco"},"rank":10,"points":23,"played":18,"wins":7,"losses":9,"draws":2,"goals":{"for":20,"against":28,"difference":-8},"efficiency":42.59},{"team":{"id":1999,"name":"Red Bull Bragantino"},"rank":11,"points":22,"played":16,"wins":6,"losses":6,"draws":4,"goals":{"for":21,"against":20,"difference":1},"efficiency":45.83},{"team":{"id":1980,"name":"Juventude"},"rank":12,"points":20,"played":15,"wins":5,"losses":5,"draws":5,"goals":{"for":19,"against":20,"difference":-1},"efficiency":44.44},{"team":{"id":1966,"name":"Internacional"},"rank":13,"points":19,"played":14,"wins":5,"losses":5,"draws":4,"goals":{"for":12,"against":12,"difference":0},"efficiency":45.24},{"team":{"id":1957,"name":"Corinthians"},"rank":14,"points":18,"played":18,"wins":4,"losses":8,"draws":6,"goals":{"for":15,"against":23,"difference":-8},"efficiency":33.33},{"team":{"id":1984,"name":"Criciúma"},"rank":15,"points":17,"played":16,"wins":4,"losses":7,"draws":5,"goals":{"for":23,"against":26,"difference":-3},"efficiency":35.42},{"team":{"id":49202,"name":"Cuiabá"},"rank":16,"points":17,"played":16,"wins":4,"losses":7,"draws":5,"goals":{"for":18,"against":21,"difference":-3},"efficiency":35.42},{"team":{"id":1962,"name":"Vitória"},"rank":17,"points":15,"played":18,"wins":4,"losses":11,"draws":3,"goals":{"for":19,"against":30,"difference":-11},"efficiency":27.78},{"team":{"id":5926,"name":"Grêmio"},"rank":18,"points":14,"played":16,"wins":4,"losses":10,"draws":2,"goals":{"for":12,"against":20,"difference":-8},"efficiency":29.17},{"team":{"id":7314,"name":"Atlético Goianiense"},"rank":19,"points":11,"played":17,"wins":2,"losses":10,"draws":5,"goals":{"for":14,"against":25,"difference":-11},"efficiency":21.57},{"team":{"id":1961,"name":"Fluminense"},"rank":20,"points":8,"played":16,"wins":1,"losses":10,"draws":5,"goals":{"for":12,"against":24,"difference":-12},"efficiency":16.67}],"home":{"team":{"id":5981,"name":"Flamengo"},"previousMatches":[{"home":{"team":{"id":5981,"name":"Flamengo"},"statistics":{"ballPossession":60,"totalShots":15,"corners":8,"passes":512,"fouls":12,"yellowCards":1,"redCards":0,"shotsOnTarget":0,"offsides":2}},"away":{"team":{"id":1958,"name":"Botafogo"},"statistics":{"ballPossession":40,"totalShots":9,"corners":3,"passes":358,"fouls":15,"yellowCards":4,"redCards":0,"shotsOnTarget":3,"offsides":1}},"topPlayers":{"topAssists":[{"id":840219,"name":"Pedro","total":0},{"id":840451,"name":"Luiz Araújo","total":0},{"id":333587,"name":"Giorgian De Arrascaeta","total":0},{"id":611876,"name":"Gerson","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":0}],"topScorers":[{"id":840219,"name":"Pedro","total":0},{"id":795291,"name":"Bruno Henrique","total":0},{"id":840451,"name":"Luiz Araújo","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":0},{"id":21300,"name":"David Luiz","total":0}],"topShooters":[{"id":840219,"name":"Pedro","total":4,"onTarget":0},{"id":840451,"name":"Luiz Araújo","total":4,"onTarget":0},{"id":795291,"name":"Bruno Henrique","total":1,"onTarget":0},{"id":877513,"name":"Nicolás de la Cruz","total":0,"onTarget":0},{"id":611876,"name":"Gerson","total":0,"onTarget":0}],"topYellowCards":[{"id":358548,"name":"Léo Pereira","total":0},{"id":840220,"name":"Fabrício Bruno","total":0},{"id":828839,"name":"Allan","total":0},{"id":840219,"name":"Pedro","total":0},{"id":795291,"name":"Bruno Henrique","total":0}],"topRedCards":[]}},{"home":{"team":{"id":1999,"name":"Red Bull Bragantino"},"statistics":{"ballPossession":43,"totalShots":18,"corners":8,"passes":297,"fouls":17,"yellowCards":2,"redCards":0,"shotsOnTarget":3,"offsides":0}},"away":{"team":{"id":5981,"name":"Flamengo"},"statistics":{"ballPossession":57,"totalShots":19,"corners":4,"passes":415,"fouls":10,"yellowCards":2,"redCards":0,"shotsOnTarget":6,"offsides":1}},"topPlayers":{"topAssists":[{"id":840219,"name":"Pedro","total":0},{"id":840451,"name":"Luiz Araújo","total":0},{"id":611876,"name":"Gerson","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":1}],"topScorers":[{"id":840219,"name":"Pedro","total":0},{"id":795291,"name":"Bruno Henrique","total":1},{"id":840451,"name":"Luiz Araújo","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":0},{"id":21300,"name":"David Luiz","total":0}],"topShooters":[{"id":840219,"name":"Pedro","total":3,"onTarget":2},{"id":840451,"name":"Luiz Araújo","total":2,"onTarget":0},{"id":795291,"name":"Bruno Henrique","total":8,"onTarget":3},{"id":877513,"name":"Nicolás de la Cruz","total":5,"onTarget":1},{"id":611876,"name":"Gerson","total":0,"onTarget":0}],"topYellowCards":[{"id":358548,"name":"Léo Pereira","total":0},{"id":840220,"name":"Fabrício Bruno","total":0},{"id":828839,"name":"Allan","total":0},{"id":840219,"name":"Pedro","total":0},{"id":795291,"name":"Bruno Henrique","total":0}],"topRedCards":[]}},{"home":{"team":{"id":5981,"name":"Flamengo"},"statistics":{"ballPossession":58,"totalShots":18,"corners":13,"passes":501,"fouls":12,"yellowCards":1,"redCards":0,"shotsOnTarget":9,"offsides":1}},"away":{"team":{"id":1957,"name":"Corinthians"},"statistics":{"ballPossession":42,"totalShots":13,"corners":6,"passes":361,"fouls":16,"yellowCards":1,"redCards":0,"shotsOnTarget":3,"offsides":1}},"topPlayers":{"topAssists":[{"id":840219,"name":"Pedro","total":0},{"id":840451,"name":"Luiz Araújo","total":0},{"id":333587,"name":"Giorgian De Arrascaeta","total":0},{"id":611876,"name":"Gerson","total":1},{"id":877513,"name":"Nicolás de la Cruz","total":0}],"topScorers":[{"id":840219,"name":"Pedro","total":1},{"id":840451,"name":"Luiz Araújo","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":0},{"id":21300,"name":"David Luiz","total":0}],"topShooters":[{"id":840219,"name":"Pedro","total":4,"onTarget":2},{"id":840451,"name":"Luiz Araújo","total":0,"onTarget":0},{"id":877513,"name":"Nicolás de la Cruz","total":2,"onTarget":1},{"id":611876,"name":"Gerson","total":1,"onTarget":0}],"topYellowCards":[{"id":358548,"name":"Léo Pereira","total":0},{"id":840220,"name":"Fabrício Bruno","total":0},{"id":828839,"name":"Allan","total":0},{"id":840219,"name":"Pedro","total":0}],"topRedCards":[]}},{"home":{"team":{"id":7314,"name":"Atlético Goianiense"},"statistics":{"ballPossession":32,"totalShots":11,"corners":4,"passes":208,"fouls":12,"yellowCards":5,"redCards":2,"shotsOnTarget":4,"offsides":2}},"away":{"team":{"id":5981,"name":"Flamengo"},"statistics":{"ballPossession":68,"totalShots":15,"corners":4,"passes":471,"fouls":12,"yellowCards":3,"redCards":0,"shotsOnTarget":2,"offsides":1}},"topPlayers":{"topAssists":[{"id":840219,"name":"Pedro","total":0},{"id":840451,"name":"Luiz Araújo","total":0},{"id":333587,"name":"Giorgian De Arrascaeta","total":0},{"id":611876,"name":"Gerson","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":0}],"topScorers":[{"id":840219,"name":"Pedro","total":1},{"id":795291,"name":"Bruno Henrique","total":0},{"id":840451,"name":"Luiz Araújo","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":1},{"id":21300,"name":"David Luiz","total":0}],"topShooters":[{"id":840219,"name":"Pedro","total":2,"onTarget":1},{"id":840451,"name":"Luiz Araújo","total":1,"onTarget":0},{"id":795291,"name":"Bruno Henrique","total":1,"onTarget":0},{"id":877513,"name":"Nicolás de la Cruz","total":2,"onTarget":1},{"id":611876,"name":"Gerson","total":0,"onTarget":0}],"topYellowCards":[{"id":358548,"name":"Léo Pereira","total":0},{"id":840220,"name":"Fabrício Bruno","total":0},{"id":828839,"name":"Allan","total":0},{"id":840219,"name":"Pedro","total":0},{"id":795291,"name":"Bruno Henrique","total":0}],"topRedCards":[]}},{"home":{"team":{"id":5981,"name":"Flamengo"},"statistics":{"ballPossession":47,"totalShots":12,"corners":9,"passes":404,"fouls":19,"yellowCards":1,"redCards":0,"shotsOnTarget":6,"offsides":1}},"away":{"team":{"id":1981,"name":"São Paulo"},"statistics":{"ballPossession":53,"totalShots":10,"corners":1,"passes":463,"fouls":19,"yellowCards":3,"redCards":0,"shotsOnTarget":3,"offsides":2}},"topPlayers":{"topAssists":[{"id":840219,"name":"Pedro","total":0},{"id":840451,"name":"Luiz Araújo","total":0},{"id":333587,"name":"Giorgian De Arrascaeta","total":0},{"id":611876,"name":"Gerson","total":0},{"id":877513,"name":"Nicolás de la Cruz","total":1}],"topScorers":[{"id":840219,"name":"Pedro","total":0},{"id":795291,"name":"Bruno Henrique","total":0},{"id":840451,"name":"Luiz Araújo","total":1},{"id":877513,"name":"Nicolás de la Cruz","total":1},{"id":21300,"name":"David Luiz","total":0}],"topShooters":[{"id":840219,"name":"Pedro","total":3,"onTarget":1},{"id":840451,"name":"Luiz Araújo","total":2,"onTarget":1},{"id":795291,"name":"Bruno Henrique","total":2,"onTarget":1},{"id":877513,"name":"Nicolás de la Cruz","total":2,"onTarget":1},{"id":611876,"name":"Gerson","total":0,"onTarget":0}],"topYellowCards":[{"id":358548,"name":"Léo Pereira","total":0},{"id":840220,"name":"Fabrício Bruno","total":0},{"id":828839,"name":"Allan","total":0},{"id":840219,"name":"Pedro","total":0},{"id":795291,"name":"Bruno Henrique","total":0}],"topRedCards":[]}}],"statistics":{"matches":17,"goals":{"for":{"total":{"home":12,"away":16,"total":28},"avg":{"home":0.75,"away":1,"total":1.75},"max":{"home":2,"away":6,"total":8}},"against":{"total":{"home":9,"away":8,"total":17},"avg":{"home":0.56,"away":0.5,"total":1.06},"max":{"home":2,"away":2,"total":4}}},"shots":{"onTarget":{"total":96,"avg":6,"max":18,"min":0},"total":{"total":241,"avg":15.06,"max":30,"min":7}},"ballPossession":{"total":866,"avg":54.13,"max":73,"min":35},"corners":{"total":106,"avg":6.63,"max":13,"min":2},"fouls":{"total":175,"avg":10.94,"max":19,"min":5},"yellowCards":{"total":27,"avg":1.69,"max":4,"min":0},"redCards":{"total":0,"avg":0,"max":0,"min":0},"offsides":{"total":19,"avg":1.19,"max":3,"min":0},"passes":{"total":7291,"avg":455.69,"max":651,"min":360},"topPlayers":{"topAssists":[{"player":{"id":840219,"name":"Pedro"},"statistics":{"total":5,"avg":0.29411764705882354}},{"player":{"id":840451,"name":"Luiz Araújo"},"statistics":{"total":4,"avg":0.23529411764705882}},{"player":{"id":333587,"name":"Giorgian De Arrascaeta"},"statistics":{"total":3,"avg":0.6}},{"player":{"id":611876,"name":"Gerson"},"statistics":{"total":3,"avg":0.17647058823529413}},{"player":{"id":877513,"name":"Nicolás de la Cruz"},"statistics":{"total":2,"avg":0.25}}],"topScorers":[{"player":{"id":840219,"name":"Pedro"},"statistics":{"total":9,"avg":0.5294117647058824}},{"player":{"id":795291,"name":"Bruno Henrique"},"statistics":{"total":4,"avg":0.3076923076923077}},{"player":{"id":840451,"name":"Luiz Araújo"},"statistics":{"total":3,"avg":0.17647058823529413}},{"player":{"id":877513,"name":"Nicolás de la Cruz"},"statistics":{"total":2,"avg":0.25}},{"player":{"id":21300,"name":"David Luiz"},"statistics":{"total":2,"avg":0.18181818181818182}}],"topShooters":[{"player":{"id":840219,"name":"Pedro"},"statistics":{"total":41,"avg":2.411764705882353}},{"player":{"id":840451,"name":"Luiz Araújo"},"statistics":{"total":33,"avg":1.9411764705882353}},{"player":{"id":795291,"name":"Bruno Henrique"},"statistics":{"total":26,"avg":2}},{"player":{"id":877513,"name":"Nicolás de la Cruz"},"statistics":{"total":18,"avg":2.25}},{"player":{"id":611876,"name":"Gerson"},"statistics":{"total":18,"avg":1.0588235294117647}}],"topYellowCards":[{"player":{"id":358548,"name":"Léo Pereira"},"statistics":{"total":4,"avg":0.2857142857142857}},{"player":{"id":840220,"name":"Fabrício Bruno"},"statistics":{"total":3,"avg":0.2}},{"player":{"id":828839,"name":"Allan"},"statistics":{"total":3,"avg":0.23076923076923078}},{"player":{"id":840219,"name":"Pedro"},"statistics":{"total":2,"avg":0.11764705882352941}},{"player":{"id":795291,"name":"Bruno Henrique"},"statistics":{"total":2,"avg":0.15384615384615385}}],"topRedCards":[]}}},"away":{"team":{"id":1984,"name":"Criciúma"},"previousMatches":[{"home":{"team":{"id":1967,"name":"Athletico"},"statistics":{"ballPossession":57,"totalShots":23,"corners":5,"passes":479,"fouls":9,"yellowCards":0,"redCards":0,"shotsOnTarget":7,"offsides":2}},"away":{"team":{"id":1984,"name":"Criciúma"},"statistics":{"ballPossession":43,"totalShots":12,"corners":3,"passes":366,"fouls":12,"yellowCards":1,"redCards":0,"shotsOnTarget":4,"offsides":3}},"topPlayers":{"topAssists":[{"id":46620,"name":"Yannick Bolasie","total":0},{"id":992791,"name":"Claudinho","total":0},{"id":783490,"name":"Marcelo Hermes","total":0},{"id":822523,"name":"Matheusinho","total":0}],"topScorers":[{"id":822523,"name":"Matheusinho","total":0},{"id":829832,"name":"Arthur Caíke","total":0},{"id":46620,"name":"Yannick Bolasie","total":0},{"id":599688,"name":"Barreto","total":1}],"topShooters":[{"id":46620,"name":"Yannick Bolasie","total":4,"onTarget":1},{"id":829832,"name":"Arthur Caíke","total":1,"onTarget":0},{"id":822523,"name":"Matheusinho","total":2,"onTarget":0},{"id":599688,"name":"Barreto","total":2,"onTarget":2},{"id":1463909,"name":"Newton","total":0,"onTarget":0}],"topYellowCards":[{"id":18082,"name":"Éder","total":0},{"id":931521,"name":"Ronald","total":0},{"id":599688,"name":"Barreto","total":0},{"id":992791,"name":"Claudinho","total":0}],"topRedCards":[{"id":796925,"name":"Allano","total":0},{"id":124766,"name":"Gustavo","total":0}]}},{"home":{"team":{"id":1974,"name":"Vasco"},"statistics":{"ballPossession":58,"totalShots":21,"corners":5,"passes":518,"fouls":13,"yellowCards":1,"redCards":0,"shotsOnTarget":5,"offsides":0}},"away":{"team":{"id":1984,"name":"Criciúma"},"statistics":{"ballPossession":42,"totalShots":17,"corners":4,"passes":392,"fouls":7,"yellowCards":0,"redCards":0,"shotsOnTarget":10,"offsides":2}},"topPlayers":{"topAssists":[{"id":46620,"name":"Yannick Bolasie","total":2},{"id":992791,"name":"Claudinho","total":0},{"id":783490,"name":"Marcelo Hermes","total":0},{"id":886773,"name":"Rodrigo Fagundes","total":0},{"id":822523,"name":"Matheusinho","total":0}],"topScorers":[{"id":822523,"name":"Matheusinho","total":0},{"id":829832,"name":"Arthur Caíke","total":0},{"id":865321,"name":"Fellipe Mateus","total":2},{"id":46620,"name":"Yannick Bolasie","total":1},{"id":599688,"name":"Barreto","total":0}],"topShooters":[{"id":46620,"name":"Yannick Bolasie","total":4,"onTarget":2},{"id":829832,"name":"Arthur Caíke","total":1,"onTarget":1},{"id":822523,"name":"Matheusinho","total":0,"onTarget":0},{"id":599688,"name":"Barreto","total":0,"onTarget":0},{"id":1463909,"name":"Newton","total":0,"onTarget":0}],"topYellowCards":[{"id":886773,"name":"Rodrigo Fagundes","total":0},{"id":18082,"name":"Éder","total":0},{"id":931521,"name":"Ronald","total":0},{"id":599688,"name":"Barreto","total":0},{"id":992791,"name":"Claudinho","total":0}],"topRedCards":[{"id":124766,"name":"Gustavo","total":0},{"id":247665,"name":"Miguel Trauco","total":0}]}},{"home":{"team":{"id":1984,"name":"Criciúma"},"statistics":{"ballPossession":47,"totalShots":10,"corners":0,"passes":423,"fouls":11,"yellowCards":4,"redCards":0,"shotsOnTarget":3,"offsides":3}},"away":{"team":{"id":1980,"name":"Juventude"},"statistics":{"ballPossession":53,"totalShots":15,"corners":4,"passes":464,"fouls":15,"yellowCards":6,"redCards":0,"shotsOnTarget":4,"offsides":4}},"topPlayers":{"topAssists":[{"id":46620,"name":"Yannick Bolasie","total":0},{"id":992791,"name":"Claudinho","total":0},{"id":783490,"name":"Marcelo Hermes","total":1},{"id":886773,"name":"Rodrigo Fagundes","total":0},{"id":822523,"name":"Matheusinho","total":0}],"topScorers":[{"id":822523,"name":"Matheusinho","total":0},{"id":829832,"name":"Arthur Caíke","total":0},{"id":865321,"name":"Fellipe Mateus","total":0},{"id":46620,"name":"Yannick Bolasie","total":0},{"id":599688,"name":"Barreto","total":0}],"topShooters":[{"id":46620,"name":"Yannick Bolasie","total":0,"onTarget":0},{"id":829832,"name":"Arthur Caíke","total":0,"onTarget":0},{"id":822523,"name":"Matheusinho","total":1,"onTarget":0},{"id":599688,"name":"Barreto","total":0,"onTarget":0}],"topYellowCards":[{"id":886773,"name":"Rodrigo Fagundes","total":0},{"id":18082,"name":"Éder","total":0},{"id":599688,"name":"Barreto","total":0},{"id":992791,"name":"Claudinho","total":0}],"topRedCards":[{"id":247665,"name":"Miguel Trauco","total":0}]}},{"home":{"team":{"id":1977,"name":"Atlético Mineiro"},"statistics":{"ballPossession":68,"totalShots":22,"corners":9,"passes":712,"fouls":12,"yellowCards":2,"redCards":0,"shotsOnTarget":6,"offsides":2}},"away":{"team":{"id":1984,"name":"Criciúma"},"statistics":{"ballPossession":32,"totalShots":5,"corners":2,"passes":333,"fouls":10,"yellowCards":4,"redCards":0,"shotsOnTarget":1,"offsides":0}},"topPlayers":{"topAssists":[{"id":46620,"name":"Yannick Bolasie","total":0},{"id":992791,"name":"Claudinho","total":0},{"id":783490,"name":"Marcelo Hermes","total":0},{"id":886773,"name":"Rodrigo Fagundes","total":0},{"id":822523,"name":"Matheusinho","total":0}],"topScorers":[{"id":822523,"name":"Matheusinho","total":1},{"id":829832,"name":"Arthur Caíke","total":0},{"id":865321,"name":"Fellipe Mateus","total":0},{"id":46620,"name":"Yannick Bolasie","total":0},{"id":599688,"name":"Barreto","total":0}],"topShooters":[{"id":46620,"name":"Yannick Bolasie","total":1,"onTarget":0},{"id":829832,"name":"Arthur Caíke","total":0,"onTarget":0},{"id":822523,"name":"Matheusinho","total":1,"onTarget":1},{"id":599688,"name":"Barreto","total":0,"onTarget":0}],"topYellowCards":[{"id":886773,"name":"Rodrigo Fagundes","total":0},{"id":599688,"name":"Barreto","total":0},{"id":992791,"name":"Claudinho","total":0}],"topRedCards":[{"id":247665,"name":"Miguel Trauco","total":0}]}}],"statistics":{"matches":16,"goals":{"for":{"total":{"home":11,"away":11,"total":22},"avg":{"home":0.73,"away":0.73,"total":1.46},"max":{"home":2,"away":4,"total":6}},"against":{"total":{"home":13,"away":11,"total":24},"avg":{"home":0.87,"away":0.73,"total":1.6},"max":{"home":5,"away":3,"total":8}}},"shots":{"onTarget":{"total":72,"avg":4.8,"max":10,"min":1},"total":{"total":213,"avg":14.2,"max":23,"min":5}},"ballPossession":{"total":645,"avg":43,"max":62,"min":32},"corners":{"total":54,"avg":3.6,"max":7,"min":0},"fouls":{"total":201,"avg":13.4,"max":22,"min":7},"yellowCards":{"total":44,"avg":2.93,"max":7,"min":0},"redCards":{"total":3,"avg":0.2,"max":1,"min":0},"offsides":{"total":31,"avg":2.07,"max":5,"min":0},"passes":{"total":5601,"avg":373.4,"max":506,"min":228},"topPlayers":{"topAssists":[{"player":{"id":46620,"name":"Yannick Bolasie"},"statistics":{"total":3,"avg":0.21428571428571427}},{"player":{"id":992791,"name":"Claudinho"},"statistics":{"total":2,"avg":0.125}},{"player":{"id":783490,"name":"Marcelo Hermes"},"statistics":{"total":2,"avg":0.13333333333333333}},{"player":{"id":886773,"name":"Rodrigo Fagundes"},"statistics":{"total":1,"avg":0.06666666666666667}},{"player":{"id":822523,"name":"Matheusinho"},"statistics":{"total":1,"avg":0.07692307692307693}}],"topScorers":[{"player":{"id":822523,"name":"Matheusinho"},"statistics":{"total":5,"avg":0.38461538461538464}},{"player":{"id":829832,"name":"Arthur Caíke"},"statistics":{"total":3,"avg":0.1875}},{"player":{"id":865321,"name":"Fellipe Mateus"},"statistics":{"total":2,"avg":0.18181818181818182}},{"player":{"id":46620,"name":"Yannick Bolasie"},"statistics":{"total":2,"avg":0.14285714285714285}},{"player":{"id":599688,"name":"Barreto"},"statistics":{"total":2,"avg":0.125}}],"topShooters":[{"player":{"id":46620,"name":"Yannick Bolasie"},"statistics":{"total":36,"avg":2.5714285714285716}},{"player":{"id":829832,"name":"Arthur Caíke"},"statistics":{"total":31,"avg":1.9375}},{"player":{"id":822523,"name":"Matheusinho"},"statistics":{"total":21,"avg":1.6153846153846154}},{"player":{"id":599688,"name":"Barreto"},"statistics":{"total":15,"avg":0.9375}},{"player":{"id":1463909,"name":"Newton"},"statistics":{"total":13,"avg":1.1818181818181819}}],"topYellowCards":[{"player":{"id":886773,"name":"Rodrigo Fagundes"},"statistics":{"total":5,"avg":0.3333333333333333}},{"player":{"id":18082,"name":"Éder"},"statistics":{"total":5,"avg":0.35714285714285715}},{"player":{"id":931521,"name":"Ronald"},"statistics":{"total":4,"avg":0.3333333333333333}},{"player":{"id":599688,"name":"Barreto"},"statistics":{"total":3,"avg":0.1875}},{"player":{"id":992791,"name":"Claudinho"},"statistics":{"total":3,"avg":0.1875}}],"topRedCards":[{"player":{"id":796925,"name":"Allano"},"statistics":{"total":2,"avg":0.2222222222222222}},{"player":{"id":124766,"name":"Gustavo"},"statistics":{"total":1,"avg":0.07692307692307693}},{"player":{"id":247665,"name":"Miguel Trauco"},"statistics":{"total":1,"avg":0.08333333333333333}}]}}}}
+{
+  "round": 19,
+  "season": 2024,
+  "standing": [
+    {
+      "team": {
+        "id": 1958,
+        "name": "Botafogo",
+        "logo": "https://www.sofascore.com/api/v1/team/1958/image"
+      },
+      "rank": 1,
+      "points": 39,
+      "played": 18,
+      "wins": 12,
+      "losses": 3,
+      "draws": 3,
+      "goals": {
+        "for": 29,
+        "against": 14,
+        "difference": 15
+      },
+      "efficiency": 72.22
+    },
+    {
+      "team": {
+        "id": 1963,
+        "name": "Palmeiras",
+        "logo": "https://www.sofascore.com/api/v1/team/1963/image"
+      },
+      "rank": 2,
+      "points": 36,
+      "played": 18,
+      "wins": 11,
+      "losses": 4,
+      "draws": 3,
+      "goals": {
+        "for": 27,
+        "against": 13,
+        "difference": 14
+      },
+      "efficiency": 66.67
+    },
+    {
+      "team": {
+        "id": 5981,
+        "name": "Flamengo",
+        "logo": "https://www.sofascore.com/api/v1/team/5981/image"
+      },
+      "rank": 3,
+      "points": 34,
+      "played": 17,
+      "wins": 10,
+      "losses": 3,
+      "draws": 4,
+      "goals": {
+        "for": 30,
+        "against": 18,
+        "difference": 12
+      },
+      "efficiency": 66.67
+    },
+    {
+      "team": {
+        "id": 2020,
+        "name": "Fortaleza",
+        "logo": "https://www.sofascore.com/api/v1/team/2020/image"
+      },
+      "rank": 4,
+      "points": 32,
+      "played": 17,
+      "wins": 9,
+      "losses": 3,
+      "draws": 5,
+      "goals": {
+        "for": 22,
+        "against": 17,
+        "difference": 5
+      },
+      "efficiency": 62.75
+    },
+    {
+      "team": {
+        "id": 1981,
+        "name": "São Paulo",
+        "logo": "https://www.sofascore.com/api/v1/team/1981/image"
+      },
+      "rank": 5,
+      "points": 31,
+      "played": 18,
+      "wins": 9,
+      "losses": 5,
+      "draws": 4,
+      "goals": {
+        "for": 26,
+        "against": 18,
+        "difference": 8
+      },
+      "efficiency": 57.41
+    },
+    {
+      "team": {
+        "id": 1955,
+        "name": "Bahia",
+        "logo": "https://www.sofascore.com/api/v1/team/1955/image"
+      },
+      "rank": 6,
+      "points": 30,
+      "played": 18,
+      "wins": 9,
+      "losses": 6,
+      "draws": 3,
+      "goals": {
+        "for": 27,
+        "against": 22,
+        "difference": 5
+      },
+      "efficiency": 55.56
+    },
+    {
+      "team": {
+        "id": 1954,
+        "name": "Cruzeiro",
+        "logo": "https://www.sofascore.com/api/v1/team/1954/image"
+      },
+      "rank": 7,
+      "points": 29,
+      "played": 17,
+      "wins": 9,
+      "losses": 6,
+      "draws": 2,
+      "goals": {
+        "for": 23,
+        "against": 20,
+        "difference": 3
+      },
+      "efficiency": 56.86
+    },
+    {
+      "team": {
+        "id": 1967,
+        "name": "Athletico",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "rank": 8,
+      "points": 25,
+      "played": 17,
+      "wins": 7,
+      "losses": 6,
+      "draws": 4,
+      "goals": {
+        "for": 20,
+        "against": 17,
+        "difference": 3
+      },
+      "efficiency": 49.02
+    },
+    {
+      "team": {
+        "id": 1999,
+        "name": "Red Bull Bragantino",
+        "logo": "https://www.sofascore.com/api/v1/team/1999/image"
+      },
+      "rank": 9,
+      "points": 25,
+      "played": 17,
+      "wins": 7,
+      "losses": 6,
+      "draws": 4,
+      "goals": {
+        "for": 22,
+        "against": 20,
+        "difference": 2
+      },
+      "efficiency": 49.02
+    },
+    {
+      "team": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "rank": 10,
+      "points": 25,
+      "played": 17,
+      "wins": 6,
+      "losses": 4,
+      "draws": 7,
+      "goals": {
+        "for": 25,
+        "against": 25,
+        "difference": 0
+      },
+      "efficiency": 49.02
+    },
+    {
+      "team": {
+        "id": 1974,
+        "name": "Vasco",
+        "logo": "https://www.sofascore.com/api/v1/team/1974/image"
+      },
+      "rank": 11,
+      "points": 23,
+      "played": 18,
+      "wins": 7,
+      "losses": 9,
+      "draws": 2,
+      "goals": {
+        "for": 20,
+        "against": 28,
+        "difference": -8
+      },
+      "efficiency": 42.59
+    },
+    {
+      "team": {
+        "id": 1980,
+        "name": "Juventude",
+        "logo": "https://www.sofascore.com/api/v1/team/1980/image"
+      },
+      "rank": 12,
+      "points": 21,
+      "played": 16,
+      "wins": 5,
+      "losses": 5,
+      "draws": 6,
+      "goals": {
+        "for": 19,
+        "against": 20,
+        "difference": -1
+      },
+      "efficiency": 43.75
+    },
+    {
+      "team": {
+        "id": 1966,
+        "name": "Internacional",
+        "logo": "https://www.sofascore.com/api/v1/team/1966/image"
+      },
+      "rank": 13,
+      "points": 19,
+      "played": 14,
+      "wins": 5,
+      "losses": 5,
+      "draws": 4,
+      "goals": {
+        "for": 12,
+        "against": 12,
+        "difference": 0
+      },
+      "efficiency": 45.24
+    },
+    {
+      "team": {
+        "id": 1957,
+        "name": "Corinthians",
+        "logo": "https://www.sofascore.com/api/v1/team/1957/image"
+      },
+      "rank": 14,
+      "points": 18,
+      "played": 18,
+      "wins": 4,
+      "losses": 8,
+      "draws": 6,
+      "goals": {
+        "for": 15,
+        "against": 23,
+        "difference": -8
+      },
+      "efficiency": 33.33
+    },
+    {
+      "team": {
+        "id": 1984,
+        "name": "Criciúma",
+        "logo": "https://www.sofascore.com/api/v1/team/1984/image"
+      },
+      "rank": 15,
+      "points": 17,
+      "played": 16,
+      "wins": 4,
+      "losses": 7,
+      "draws": 5,
+      "goals": {
+        "for": 23,
+        "against": 26,
+        "difference": -3
+      },
+      "efficiency": 35.42
+    },
+    {
+      "team": {
+        "id": 49202,
+        "name": "Cuiabá",
+        "logo": "https://www.sofascore.com/api/v1/team/49202/image"
+      },
+      "rank": 16,
+      "points": 17,
+      "played": 17,
+      "wins": 4,
+      "losses": 8,
+      "draws": 5,
+      "goals": {
+        "for": 18,
+        "against": 22,
+        "difference": -4
+      },
+      "efficiency": 33.33
+    },
+    {
+      "team": {
+        "id": 1962,
+        "name": "Vitória",
+        "logo": "https://www.sofascore.com/api/v1/team/1962/image"
+      },
+      "rank": 17,
+      "points": 15,
+      "played": 18,
+      "wins": 4,
+      "losses": 11,
+      "draws": 3,
+      "goals": {
+        "for": 19,
+        "against": 30,
+        "difference": -11
+      },
+      "efficiency": 27.78
+    },
+    {
+      "team": {
+        "id": 5926,
+        "name": "Grêmio",
+        "logo": "https://www.sofascore.com/api/v1/team/5926/image"
+      },
+      "rank": 18,
+      "points": 14,
+      "played": 16,
+      "wins": 4,
+      "losses": 10,
+      "draws": 2,
+      "goals": {
+        "for": 12,
+        "against": 20,
+        "difference": -8
+      },
+      "efficiency": 29.17
+    },
+    {
+      "team": {
+        "id": 1961,
+        "name": "Fluminense",
+        "logo": "https://www.sofascore.com/api/v1/team/1961/image"
+      },
+      "rank": 19,
+      "points": 11,
+      "played": 17,
+      "wins": 2,
+      "losses": 10,
+      "draws": 5,
+      "goals": {
+        "for": 13,
+        "against": 24,
+        "difference": -11
+      },
+      "efficiency": 21.57
+    },
+    {
+      "team": {
+        "id": 7314,
+        "name": "Atlético Goianiense",
+        "logo": "https://www.sofascore.com/api/v1/team/7314/image"
+      },
+      "rank": 20,
+      "points": 11,
+      "played": 18,
+      "wins": 2,
+      "losses": 11,
+      "draws": 5,
+      "goals": {
+        "for": 15,
+        "against": 28,
+        "difference": -13
+      },
+      "efficiency": 20.37
+    }
+  ],
+  "previousRounds": [
+    {
+      "id": 12117145,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 1974,
+        "name": "Vasco",
+        "code": "VAS",
+        "logo": "https://www.sofascore.com/api/v1/team/1974/image"
+      },
+      "winner": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 18,
+      "score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "id": 12117150,
+      "home": {
+        "id": 1999,
+        "name": "Red Bull Bragantino",
+        "code": "BRA",
+        "logo": "https://www.sofascore.com/api/v1/team/1999/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "winner": {
+        "id": 1999,
+        "name": "Red Bull Bragantino",
+        "code": "BRA",
+        "logo": "https://www.sofascore.com/api/v1/team/1999/image"
+      },
+      "round": 18,
+      "score": {
+        "home": 1,
+        "away": 0
+      }
+    },
+    {
+      "id": 12117143,
+      "home": {
+        "id": 1980,
+        "name": "Juventude",
+        "code": "JUV",
+        "logo": "https://www.sofascore.com/api/v1/team/1980/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 17,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117137,
+      "home": {
+        "id": 1961,
+        "name": "Fluminense",
+        "code": "FLU",
+        "logo": "https://www.sofascore.com/api/v1/team/1961/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 17,
+      "score": {}
+    },
+    {
+      "id": 12117131,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 1955,
+        "name": "Bahia",
+        "code": "BAH",
+        "logo": "https://www.sofascore.com/api/v1/team/1955/image"
+      },
+      "winner": {
+        "id": 1955,
+        "name": "Bahia",
+        "code": "BAH",
+        "logo": "https://www.sofascore.com/api/v1/team/1955/image"
+      },
+      "round": 16,
+      "score": {
+        "home": 1,
+        "away": 3
+      }
+    },
+    {
+      "id": 12117125,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 1981,
+        "name": "São Paulo",
+        "code": "SPA",
+        "logo": "https://www.sofascore.com/api/v1/team/1981/image"
+      },
+      "winner": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 16,
+      "score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117122,
+      "home": {
+        "id": 7314,
+        "name": "Atlético Goianiense",
+        "code": "GOI",
+        "logo": "https://www.sofascore.com/api/v1/team/7314/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "winner": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 15,
+      "score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "id": 12117118,
+      "home": {
+        "id": 1958,
+        "name": "Botafogo",
+        "code": "BOT",
+        "logo": "https://www.sofascore.com/api/v1/team/1958/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "winner": {
+        "id": 1958,
+        "name": "Botafogo",
+        "code": "BOT",
+        "logo": "https://www.sofascore.com/api/v1/team/1958/image"
+      },
+      "round": 15,
+      "score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "id": 12117111,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 1981,
+        "name": "São Paulo",
+        "code": "SPA",
+        "logo": "https://www.sofascore.com/api/v1/team/1981/image"
+      },
+      "winner": {
+        "id": 1981,
+        "name": "São Paulo",
+        "code": "SPA",
+        "logo": "https://www.sofascore.com/api/v1/team/1981/image"
+      },
+      "round": 14,
+      "score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "id": 12117105,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 5981,
+        "name": "Flamengo",
+        "code": "FLA",
+        "logo": "https://www.sofascore.com/api/v1/team/5981/image"
+      },
+      "winner": {
+        "id": 5981,
+        "name": "Flamengo",
+        "code": "FLA",
+        "logo": "https://www.sofascore.com/api/v1/team/5981/image"
+      },
+      "round": 14,
+      "score": {
+        "home": 2,
+        "away": 4
+      }
+    },
+    {
+      "id": 12117095,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 7314,
+        "name": "Atlético Goianiense",
+        "code": "GOI",
+        "logo": "https://www.sofascore.com/api/v1/team/7314/image"
+      },
+      "round": 13,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117096,
+      "home": {
+        "id": 1962,
+        "name": "Vitória",
+        "code": "VIT",
+        "logo": "https://www.sofascore.com/api/v1/team/1962/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "winner": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 13,
+      "score": {
+        "home": 0,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117085,
+      "home": {
+        "id": 1954,
+        "name": "Cruzeiro",
+        "code": "CRU",
+        "logo": "https://www.sofascore.com/api/v1/team/1954/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "winner": {
+        "id": 1954,
+        "name": "Cruzeiro",
+        "code": "CRU",
+        "logo": "https://www.sofascore.com/api/v1/team/1954/image"
+      },
+      "round": 12,
+      "score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "id": 12117084,
+      "home": {
+        "id": 1966,
+        "name": "Internacional",
+        "code": "INT",
+        "logo": "https://www.sofascore.com/api/v1/team/1966/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "winner": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 12,
+      "score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "id": 12117081,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 1957,
+        "name": "Corinthians",
+        "code": "COR",
+        "logo": "https://www.sofascore.com/api/v1/team/1957/image"
+      },
+      "round": 11,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117075,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 2020,
+        "name": "Fortaleza",
+        "code": "FOR",
+        "logo": "https://www.sofascore.com/api/v1/team/2020/image"
+      },
+      "round": 11,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117068,
+      "home": {
+        "id": 1958,
+        "name": "Botafogo",
+        "code": "BOT",
+        "logo": "https://www.sofascore.com/api/v1/team/1958/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 10,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117066,
+      "home": {
+        "id": 1962,
+        "name": "Vitória",
+        "code": "VIT",
+        "logo": "https://www.sofascore.com/api/v1/team/1962/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "winner": {
+        "id": 1962,
+        "name": "Vitória",
+        "code": "VIT",
+        "logo": "https://www.sofascore.com/api/v1/team/1962/image"
+      },
+      "round": 10,
+      "score": {
+        "home": 4,
+        "away": 2
+      }
+    },
+    {
+      "id": 12117061,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 5981,
+        "name": "Flamengo",
+        "code": "FLA",
+        "logo": "https://www.sofascore.com/api/v1/team/5981/image"
+      },
+      "round": 9,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12117055,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 1963,
+        "name": "Palmeiras",
+        "code": "PAL",
+        "logo": "https://www.sofascore.com/api/v1/team/1963/image"
+      },
+      "winner": {
+        "id": 1963,
+        "name": "Palmeiras",
+        "code": "PAL",
+        "logo": "https://www.sofascore.com/api/v1/team/1963/image"
+      },
+      "round": 9,
+      "score": {
+        "home": 0,
+        "away": 4
+      }
+    },
+    {
+      "id": 12357103,
+      "home": {
+        "id": 1999,
+        "name": "Red Bull Bragantino",
+        "code": "BRA",
+        "logo": "https://www.sofascore.com/api/v1/team/1999/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "winner": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 8,
+      "score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "id": 12357104,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 1984,
+        "name": "Criciúma",
+        "code": "CRI",
+        "logo": "https://www.sofascore.com/api/v1/team/1984/image"
+      },
+      "winner": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 8,
+      "score": {
+        "home": 3,
+        "away": 1
+      }
+    },
+    {
+      "id": 12357241,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 1955,
+        "name": "Bahia",
+        "code": "BAH",
+        "logo": "https://www.sofascore.com/api/v1/team/1955/image"
+      },
+      "round": 7,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12357218,
+      "home": {
+        "id": 2020,
+        "name": "Fortaleza",
+        "code": "FOR",
+        "logo": "https://www.sofascore.com/api/v1/team/2020/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "winner": {
+        "id": 2020,
+        "name": "Fortaleza",
+        "code": "FOR",
+        "logo": "https://www.sofascore.com/api/v1/team/2020/image"
+      },
+      "round": 7,
+      "score": {
+        "home": 1,
+        "away": 0
+      }
+    },
+    {
+      "id": 12117029,
+      "home": {
+        "id": 1963,
+        "name": "Palmeiras",
+        "code": "PAL",
+        "logo": "https://www.sofascore.com/api/v1/team/1963/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "winner": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 6,
+      "score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "id": 12117017,
+      "home": {
+        "id": 1961,
+        "name": "Fluminense",
+        "code": "FLU",
+        "logo": "https://www.sofascore.com/api/v1/team/1961/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 5,
+      "score": {
+        "home": 2,
+        "away": 2
+      }
+    },
+    {
+      "id": 12117021,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 1974,
+        "name": "Vasco",
+        "code": "VAS",
+        "logo": "https://www.sofascore.com/api/v1/team/1974/image"
+      },
+      "winner": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 5,
+      "score": {
+        "home": 1,
+        "away": 0
+      }
+    },
+    {
+      "id": 12117012,
+      "home": {
+        "id": 49202,
+        "name": "Cuiabá",
+        "code": "CUI",
+        "logo": "https://www.sofascore.com/api/v1/team/49202/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "winner": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 4,
+      "score": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    {
+      "id": 12117013,
+      "home": {
+        "id": 1980,
+        "name": "Juventude",
+        "code": "JUV",
+        "logo": "https://www.sofascore.com/api/v1/team/1980/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 4,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12116995,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 1954,
+        "name": "Cruzeiro",
+        "code": "CRU",
+        "logo": "https://www.sofascore.com/api/v1/team/1954/image"
+      },
+      "winner": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 3,
+      "score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "id": 12117001,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 1966,
+        "name": "Internacional",
+        "code": "INT",
+        "logo": "https://www.sofascore.com/api/v1/team/1966/image"
+      },
+      "winner": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 3,
+      "score": {
+        "home": 1,
+        "away": 0
+      }
+    },
+    {
+      "id": 12116984,
+      "home": {
+        "id": 5926,
+        "name": "Grêmio",
+        "code": "GPA",
+        "logo": "https://www.sofascore.com/api/v1/team/5926/image"
+      },
+      "away": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "winner": {
+        "id": 5926,
+        "name": "Grêmio",
+        "code": "GPA",
+        "logo": "https://www.sofascore.com/api/v1/team/5926/image"
+      },
+      "round": 2,
+      "score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "id": 12116985,
+      "home": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "away": {
+        "id": 1984,
+        "name": "Criciúma",
+        "code": "CRI",
+        "logo": "https://www.sofascore.com/api/v1/team/1984/image"
+      },
+      "round": 2,
+      "score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "id": 12116981,
+      "home": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "away": {
+        "id": 49202,
+        "name": "Cuiabá",
+        "code": "CUI",
+        "logo": "https://www.sofascore.com/api/v1/team/49202/image"
+      },
+      "winner": {
+        "id": 1967,
+        "name": "Athletico",
+        "code": "CAP",
+        "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+      },
+      "round": 1,
+      "score": {
+        "home": 4,
+        "away": 0
+      }
+    },
+    {
+      "id": 12116979,
+      "home": {
+        "id": 1957,
+        "name": "Corinthians",
+        "code": "COR",
+        "logo": "https://www.sofascore.com/api/v1/team/1957/image"
+      },
+      "away": {
+        "id": 1977,
+        "name": "Atlético Mineiro",
+        "code": "ATL",
+        "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+      },
+      "round": 1,
+      "score": {
+        "home": 0,
+        "away": 0
+      }
+    }
+  ],
+  "home": {
+    "team": {
+      "id": 1967,
+      "name": "Athletico",
+      "code": "CAP",
+      "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+    },
+    "previousMatches": [
+      {
+        "round": 18,
+        "home": {
+          "team": {
+            "id": 1999,
+            "name": "Red Bull Bragantino",
+            "code": "BRA",
+            "logo": "https://www.sofascore.com/api/v1/team/1999/image"
+          },
+          "statistics": {
+            "goals": 1,
+            "ballPossession": 35,
+            "totalShots": 12,
+            "corners": 2,
+            "passes": 305,
+            "fouls": 6,
+            "yellowCards": 2,
+            "redCards": 1,
+            "shotsOnTarget": 3,
+            "offsides": 0
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1967,
+            "name": "Athletico",
+            "code": "CAP",
+            "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+          },
+          "statistics": {
+            "goals": 0,
+            "ballPossession": 65,
+            "totalShots": 19,
+            "corners": 11,
+            "passes": 542,
+            "fouls": 14,
+            "yellowCards": 7,
+            "redCards": 0,
+            "shotsOnTarget": 7,
+            "offsides": 2
+          }
+        },
+        "topPlayers": {
+          "topAssists": [],
+          "topScorers": [],
+          "topShooters": [
+            {
+              "id": 1167536,
+              "name": "Julimar",
+              "total": 2,
+              "onTarget": 0
+            },
+            {
+              "id": 139300,
+              "name": "Nikão",
+              "total": 2,
+              "onTarget": 2
+            },
+            {
+              "id": 374486,
+              "name": "Pablo",
+              "total": 2,
+              "onTarget": 0
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      },
+      {
+        "round": 16,
+        "home": {
+          "team": {
+            "id": 1967,
+            "name": "Athletico",
+            "code": "CAP",
+            "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+          },
+          "statistics": {
+            "goals": 1,
+            "ballPossession": 52,
+            "totalShots": 22,
+            "corners": 9,
+            "passes": 477,
+            "fouls": 13,
+            "yellowCards": 2,
+            "redCards": 0,
+            "shotsOnTarget": 8,
+            "offsides": 3
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1955,
+            "name": "Bahia",
+            "code": "BAH",
+            "logo": "https://www.sofascore.com/api/v1/team/1955/image"
+          },
+          "statistics": {
+            "goals": 3,
+            "ballPossession": 48,
+            "totalShots": 7,
+            "corners": 2,
+            "passes": 457,
+            "fouls": 13,
+            "yellowCards": 4,
+            "redCards": 0,
+            "shotsOnTarget": 5,
+            "offsides": 2
+          }
+        },
+        "topPlayers": {
+          "topAssists": [],
+          "topScorers": [],
+          "topShooters": [
+            {
+              "id": 1167536,
+              "name": "Julimar",
+              "total": 3,
+              "onTarget": 2
+            },
+            {
+              "id": 871273,
+              "name": "Tomás Cuello",
+              "total": 1,
+              "onTarget": 0
+            },
+            {
+              "id": 374486,
+              "name": "Pablo",
+              "total": 2,
+              "onTarget": 1
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      },
+      {
+        "round": 15,
+        "home": {
+          "team": {
+            "id": 7314,
+            "name": "Atlético Goianiense",
+            "code": "GOI",
+            "logo": "https://www.sofascore.com/api/v1/team/7314/image"
+          },
+          "statistics": {
+            "goals": 1,
+            "ballPossession": 43,
+            "totalShots": 12,
+            "corners": 4,
+            "passes": 296,
+            "fouls": 11,
+            "yellowCards": 1,
+            "redCards": 1,
+            "shotsOnTarget": 3,
+            "offsides": 0
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1967,
+            "name": "Athletico",
+            "code": "CAP",
+            "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+          },
+          "statistics": {
+            "goals": 2,
+            "ballPossession": 57,
+            "totalShots": 17,
+            "corners": 11,
+            "passes": 399,
+            "fouls": 11,
+            "yellowCards": 3,
+            "redCards": 0,
+            "shotsOnTarget": 6,
+            "offsides": 0
+          }
+        },
+        "topPlayers": {
+          "topAssists": [
+            {
+              "id": 13630,
+              "name": "Fernandinho",
+              "total": 1
+            }
+          ],
+          "topScorers": [
+            {
+              "id": 1167536,
+              "name": "Julimar",
+              "total": 1
+            }
+          ],
+          "topShooters": [
+            {
+              "id": 1167536,
+              "name": "Julimar",
+              "total": 7,
+              "onTarget": 1
+            },
+            {
+              "id": 874063,
+              "name": "Erick",
+              "total": 2,
+              "onTarget": 1
+            },
+            {
+              "id": 374486,
+              "name": "Pablo",
+              "total": 1,
+              "onTarget": 1
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      },
+      {
+        "round": 14,
+        "home": {
+          "team": {
+            "id": 1967,
+            "name": "Athletico",
+            "code": "CAP",
+            "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+          },
+          "statistics": {
+            "goals": 1,
+            "ballPossession": 45,
+            "totalShots": 12,
+            "corners": 6,
+            "passes": 402,
+            "fouls": 19,
+            "yellowCards": 1,
+            "redCards": 1,
+            "shotsOnTarget": 4,
+            "offsides": 1
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1981,
+            "name": "São Paulo",
+            "code": "SPA",
+            "logo": "https://www.sofascore.com/api/v1/team/1981/image"
+          },
+          "statistics": {
+            "goals": 2,
+            "ballPossession": 55,
+            "totalShots": 13,
+            "corners": 2,
+            "passes": 513,
+            "fouls": 8,
+            "yellowCards": 3,
+            "redCards": 0,
+            "shotsOnTarget": 8,
+            "offsides": 2
+          }
+        },
+        "topPlayers": {
+          "topAssists": [],
+          "topScorers": [
+            {
+              "id": 13630,
+              "name": "Fernandinho",
+              "total": 1
+            }
+          ],
+          "topShooters": [
+            {
+              "id": 874063,
+              "name": "Erick",
+              "total": 3,
+              "onTarget": 1
+            },
+            {
+              "id": 374486,
+              "name": "Pablo",
+              "total": 2,
+              "onTarget": 1
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      }
+    ],
+    "statistics": {
+      "matches": 17,
+      "goals": {
+        "for": {
+          "total": {
+            "home": 12,
+            "away": 7,
+            "total": 19
+          },
+          "avg": {
+            "home": 0.75,
+            "away": 0.44,
+            "total": 1.19
+          },
+          "max": {
+            "home": 4,
+            "away": 2,
+            "total": 6
+          }
+        },
+        "against": {
+          "total": {
+            "home": 8,
+            "away": 9,
+            "total": 17
+          },
+          "avg": {
+            "home": 0.5,
+            "away": 0.56,
+            "total": 1.06
+          },
+          "max": {
+            "home": 3,
+            "away": 2,
+            "total": 5
+          }
+        }
+      },
+      "shots": {
+        "onTarget": {
+          "total": 83,
+          "avg": 5.19,
+          "max": 9,
+          "min": 0
+        },
+        "total": {
+          "total": 255,
+          "avg": 15.94,
+          "max": 26,
+          "min": 4
+        }
+      },
+      "ballPossession": {
+        "total": 808,
+        "avg": 50.5,
+        "max": 65,
+        "min": 37
+      },
+      "corners": {
+        "total": 116,
+        "avg": 7.25,
+        "max": 12,
+        "min": 2
+      },
+      "fouls": {
+        "total": 223,
+        "avg": 13.94,
+        "max": 19,
+        "min": 6
+      },
+      "yellowCards": {
+        "total": 44,
+        "avg": 2.75,
+        "max": 7,
+        "min": 0
+      },
+      "redCards": {
+        "total": 3,
+        "avg": 0.19,
+        "max": 1,
+        "min": 0
+      },
+      "offsides": {
+        "total": 24,
+        "avg": 1.5,
+        "max": 3,
+        "min": 0
+      },
+      "passes": {
+        "total": 6694,
+        "avg": 418.38,
+        "max": 582,
+        "min": 258
+      },
+      "topPlayers": {
+        "topAssists": [
+          {
+            "player": {
+              "id": 13630,
+              "name": "Fernandinho"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.2
+            }
+          },
+          {
+            "player": {
+              "id": 1087079,
+              "name": "Lucas Esquivel"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.2
+            }
+          },
+          {
+            "player": {
+              "id": 1092354,
+              "name": "Bruno Zapelli"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.13
+            }
+          },
+          {
+            "player": {
+              "id": 963990,
+              "name": "Kaique Rocha"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.06
+            }
+          },
+          {
+            "player": {
+              "id": 846413,
+              "name": "Agustín Canobbio"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.14
+            }
+          }
+        ],
+        "topScorers": [
+          {
+            "player": {
+              "id": 345847,
+              "name": "Gonzalo Mastriani"
+            },
+            "statistics": {
+              "total": 4,
+              "avg": 0.33
+            }
+          },
+          {
+            "player": {
+              "id": 13630,
+              "name": "Fernandinho"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.13
+            }
+          },
+          {
+            "player": {
+              "id": 846413,
+              "name": "Agustín Canobbio"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.29
+            }
+          },
+          {
+            "player": {
+              "id": 1167536,
+              "name": "Julimar"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.13
+            }
+          },
+          {
+            "player": {
+              "id": 374486,
+              "name": "Pablo"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.13
+            }
+          }
+        ],
+        "topShooters": [
+          {
+            "player": {
+              "id": 1167536,
+              "name": "Julimar"
+            },
+            "statistics": {
+              "total": 32,
+              "avg": 2
+            }
+          },
+          {
+            "player": {
+              "id": 139300,
+              "name": "Nikão"
+            },
+            "statistics": {
+              "total": 24,
+              "avg": 2.4
+            }
+          },
+          {
+            "player": {
+              "id": 874063,
+              "name": "Erick"
+            },
+            "statistics": {
+              "total": 24,
+              "avg": 1.5
+            }
+          },
+          {
+            "player": {
+              "id": 871273,
+              "name": "Tomás Cuello"
+            },
+            "statistics": {
+              "total": 23,
+              "avg": 1.92
+            }
+          },
+          {
+            "player": {
+              "id": 374486,
+              "name": "Pablo"
+            },
+            "statistics": {
+              "total": 22,
+              "avg": 1.47
+            }
+          }
+        ],
+        "topYellowCards": [
+          {
+            "player": {
+              "id": 13630,
+              "name": "Fernandinho"
+            },
+            "statistics": {
+              "total": 6,
+              "avg": 0.4
+            }
+          },
+          {
+            "player": {
+              "id": 374486,
+              "name": "Pablo"
+            },
+            "statistics": {
+              "total": 5,
+              "avg": 0.33
+            }
+          },
+          {
+            "player": {
+              "id": 1087079,
+              "name": "Lucas Esquivel"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.2
+            }
+          },
+          {
+            "player": {
+              "id": 1085451,
+              "name": "Mateo Gamarra"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.38
+            }
+          },
+          {
+            "player": {
+              "id": 33106,
+              "name": "Thiago Heleno"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.25
+            }
+          }
+        ],
+        "topRedCards": [
+          {
+            "player": {
+              "id": 1087079,
+              "name": "Lucas Esquivel"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.07
+            }
+          },
+          {
+            "player": {
+              "id": 846413,
+              "name": "Agustín Canobbio"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.14
+            }
+          },
+          {
+            "player": {
+              "id": 1119887,
+              "name": "Léo Linck"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.11
+            }
+          },
+          {
+            "player": {
+              "id": 1128850,
+              "name": "Mycael"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.5
+            }
+          }
+        ]
+      }
+    },
+    "injuries": []
+  },
+  "away": {
+    "team": {
+      "id": 1977,
+      "name": "Atlético Mineiro",
+      "code": "ATL",
+      "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+    },
+    "previousMatches": [
+      {
+        "round": 18,
+        "home": {
+          "team": {
+            "id": 1977,
+            "name": "Atlético Mineiro",
+            "code": "ATL",
+            "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+          },
+          "statistics": {
+            "goals": 2,
+            "ballPossession": 54,
+            "totalShots": 15,
+            "corners": 6,
+            "passes": 525,
+            "fouls": 13,
+            "yellowCards": 1,
+            "redCards": 0,
+            "shotsOnTarget": 3,
+            "offsides": 1
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1974,
+            "name": "Vasco",
+            "code": "VAS",
+            "logo": "https://www.sofascore.com/api/v1/team/1974/image"
+          },
+          "statistics": {
+            "goals": 0,
+            "ballPossession": 46,
+            "totalShots": 8,
+            "corners": 1,
+            "passes": 431,
+            "fouls": 6,
+            "yellowCards": 1,
+            "redCards": 0,
+            "shotsOnTarget": 1,
+            "offsides": 0
+          }
+        },
+        "topPlayers": {
+          "topAssists": [
+            {
+              "id": 559036,
+              "name": "Gustavo Scarpa",
+              "total": 1
+            }
+          ],
+          "topScorers": [
+            {
+              "id": 34705,
+              "name": "Hulk",
+              "total": 2
+            }
+          ],
+          "topShooters": [
+            {
+              "id": 34705,
+              "name": "Hulk",
+              "total": 4,
+              "onTarget": 2
+            },
+            {
+              "id": 559036,
+              "name": "Gustavo Scarpa",
+              "total": 3,
+              "onTarget": 0
+            },
+            {
+              "id": 885179,
+              "name": "Paulinho",
+              "total": 1,
+              "onTarget": 0
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      },
+      {
+        "round": 17,
+        "home": {
+          "team": {
+            "id": 1980,
+            "name": "Juventude",
+            "code": "JUV",
+            "logo": "https://www.sofascore.com/api/v1/team/1980/image"
+          },
+          "statistics": {
+            "goals": 1,
+            "ballPossession": 27,
+            "totalShots": 8,
+            "corners": 1,
+            "passes": 246,
+            "fouls": 8,
+            "yellowCards": 2,
+            "redCards": 0,
+            "shotsOnTarget": 2,
+            "offsides": 1
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1977,
+            "name": "Atlético Mineiro",
+            "code": "ATL",
+            "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+          },
+          "statistics": {
+            "goals": 1,
+            "ballPossession": 73,
+            "totalShots": 20,
+            "corners": 8,
+            "passes": 681,
+            "fouls": 12,
+            "yellowCards": 1,
+            "redCards": 0,
+            "shotsOnTarget": 5,
+            "offsides": 3
+          }
+        },
+        "topPlayers": {
+          "topAssists": [],
+          "topScorers": [],
+          "topShooters": [
+            {
+              "id": 34705,
+              "name": "Hulk",
+              "total": 5,
+              "onTarget": 1
+            },
+            {
+              "id": 559036,
+              "name": "Gustavo Scarpa",
+              "total": 8,
+              "onTarget": 1
+            },
+            {
+              "id": 37006,
+              "name": "Eduardo Vargas",
+              "total": 2,
+              "onTarget": 2
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      },
+      {
+        "round": 16,
+        "home": {
+          "team": {
+            "id": 1977,
+            "name": "Atlético Mineiro",
+            "code": "ATL",
+            "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+          },
+          "statistics": {
+            "goals": 2,
+            "ballPossession": 62,
+            "totalShots": 14,
+            "corners": 2,
+            "passes": 608,
+            "fouls": 9,
+            "yellowCards": 2,
+            "redCards": 0,
+            "shotsOnTarget": 5,
+            "offsides": 0
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1981,
+            "name": "São Paulo",
+            "code": "SPA",
+            "logo": "https://www.sofascore.com/api/v1/team/1981/image"
+          },
+          "statistics": {
+            "goals": 1,
+            "ballPossession": 38,
+            "totalShots": 11,
+            "corners": 6,
+            "passes": 365,
+            "fouls": 13,
+            "yellowCards": 1,
+            "redCards": 1,
+            "shotsOnTarget": 4,
+            "offsides": 0
+          }
+        },
+        "topPlayers": {
+          "topAssists": [],
+          "topScorers": [
+            {
+              "id": 885179,
+              "name": "Paulinho",
+              "total": 1
+            },
+            {
+              "id": 37006,
+              "name": "Eduardo Vargas",
+              "total": 1
+            }
+          ],
+          "topShooters": [
+            {
+              "id": 34705,
+              "name": "Hulk",
+              "total": 4,
+              "onTarget": 1
+            },
+            {
+              "id": 559036,
+              "name": "Gustavo Scarpa",
+              "total": 4,
+              "onTarget": 1
+            },
+            {
+              "id": 885179,
+              "name": "Paulinho",
+              "total": 1,
+              "onTarget": 1
+            },
+            {
+              "id": 37006,
+              "name": "Eduardo Vargas",
+              "total": 1,
+              "onTarget": 1
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      },
+      {
+        "round": 15,
+        "home": {
+          "team": {
+            "id": 1958,
+            "name": "Botafogo",
+            "code": "BOT",
+            "logo": "https://www.sofascore.com/api/v1/team/1958/image"
+          },
+          "statistics": {
+            "goals": 3,
+            "ballPossession": 57,
+            "totalShots": 19,
+            "corners": 3,
+            "passes": 504,
+            "fouls": 19,
+            "yellowCards": 2,
+            "redCards": 0,
+            "shotsOnTarget": 8,
+            "offsides": 0
+          }
+        },
+        "away": {
+          "team": {
+            "id": 1977,
+            "name": "Atlético Mineiro",
+            "code": "ATL",
+            "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+          },
+          "statistics": {
+            "goals": 0,
+            "ballPossession": 43,
+            "totalShots": 6,
+            "corners": 2,
+            "passes": 375,
+            "fouls": 12,
+            "yellowCards": 1,
+            "redCards": 1,
+            "shotsOnTarget": 2,
+            "offsides": 0
+          }
+        },
+        "topPlayers": {
+          "topAssists": [],
+          "topScorers": [],
+          "topShooters": [
+            {
+              "id": 34705,
+              "name": "Hulk",
+              "total": 3,
+              "onTarget": 1
+            },
+            {
+              "id": 559036,
+              "name": "Gustavo Scarpa",
+              "total": 2,
+              "onTarget": 1
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      },
+      {
+        "round": 14,
+        "home": {
+          "team": {
+            "id": 1977,
+            "name": "Atlético Mineiro",
+            "code": "ATL",
+            "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+          },
+          "statistics": {
+            "goals": 2,
+            "ballPossession": 52,
+            "totalShots": 11,
+            "corners": 4,
+            "passes": 451,
+            "fouls": 12,
+            "yellowCards": 4,
+            "redCards": 1,
+            "shotsOnTarget": 4,
+            "offsides": 1
+          }
+        },
+        "away": {
+          "team": {
+            "id": 5981,
+            "name": "Flamengo",
+            "code": "FLA",
+            "logo": "https://www.sofascore.com/api/v1/team/5981/image"
+          },
+          "statistics": {
+            "goals": 4,
+            "ballPossession": 48,
+            "totalShots": 14,
+            "corners": 4,
+            "passes": 413,
+            "fouls": 11,
+            "yellowCards": 2,
+            "redCards": 0,
+            "shotsOnTarget": 8,
+            "offsides": 2
+          }
+        },
+        "topPlayers": {
+          "topAssists": [
+            {
+              "id": 559036,
+              "name": "Gustavo Scarpa",
+              "total": 1
+            }
+          ],
+          "topScorers": [
+            {
+              "id": 34705,
+              "name": "Hulk",
+              "total": 2
+            }
+          ],
+          "topShooters": [
+            {
+              "id": 34705,
+              "name": "Hulk",
+              "total": 7,
+              "onTarget": 2
+            },
+            {
+              "id": 885179,
+              "name": "Paulinho",
+              "total": 1,
+              "onTarget": 1
+            },
+            {
+              "id": 37006,
+              "name": "Eduardo Vargas",
+              "total": 1,
+              "onTarget": 1
+            }
+          ],
+          "topYellowCards": [],
+          "topRedCards": []
+        }
+      }
+    ],
+    "statistics": {
+      "matches": 17,
+      "goals": {
+        "for": {
+          "total": {
+            "home": 13,
+            "away": 12,
+            "total": 25
+          },
+          "avg": {
+            "home": 0.76,
+            "away": 0.71,
+            "total": 1.47
+          },
+          "max": {
+            "home": 3,
+            "away": 3,
+            "total": 6
+          }
+        },
+        "against": {
+          "total": {
+            "home": 13,
+            "away": 12,
+            "total": 25
+          },
+          "avg": {
+            "home": 0.76,
+            "away": 0.71,
+            "total": 1.47
+          },
+          "max": {
+            "home": 4,
+            "away": 4,
+            "total": 8
+          }
+        }
+      },
+      "shots": {
+        "onTarget": {
+          "total": 81,
+          "avg": 4.76,
+          "max": 8,
+          "min": 2
+        },
+        "total": {
+          "total": 248,
+          "avg": 14.59,
+          "max": 22,
+          "min": 6
+        }
+      },
+      "ballPossession": {
+        "total": 995,
+        "avg": 58.53,
+        "max": 73,
+        "min": 43
+      },
+      "corners": {
+        "total": 92,
+        "avg": 5.41,
+        "max": 10,
+        "min": 2
+      },
+      "fouls": {
+        "total": 229,
+        "avg": 13.47,
+        "max": 18,
+        "min": 9
+      },
+      "yellowCards": {
+        "total": 52,
+        "avg": 3.06,
+        "max": 6,
+        "min": 0
+      },
+      "redCards": {
+        "total": 7,
+        "avg": 0.41,
+        "max": 2,
+        "min": 0
+      },
+      "offsides": {
+        "total": 25,
+        "avg": 1.47,
+        "max": 6,
+        "min": 0
+      },
+      "passes": {
+        "total": 8789,
+        "avg": 517,
+        "max": 712,
+        "min": 342
+      },
+      "topPlayers": {
+        "topAssists": [
+          {
+            "player": {
+              "id": 559036,
+              "name": "Gustavo Scarpa"
+            },
+            "statistics": {
+              "total": 5,
+              "avg": 0.31
+            }
+          },
+          {
+            "player": {
+              "id": 34705,
+              "name": "Hulk"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.23
+            }
+          },
+          {
+            "player": {
+              "id": 913598,
+              "name": "Igor Gomes"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.18
+            }
+          },
+          {
+            "player": {
+              "id": 1127439,
+              "name": "Guilherme Arana"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.13
+            }
+          },
+          {
+            "player": {
+              "id": 885179,
+              "name": "Paulinho"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.06
+            }
+          }
+        ],
+        "topScorers": [
+          {
+            "player": {
+              "id": 885179,
+              "name": "Paulinho"
+            },
+            "statistics": {
+              "total": 6,
+              "avg": 0.38
+            }
+          },
+          {
+            "player": {
+              "id": 34705,
+              "name": "Hulk"
+            },
+            "statistics": {
+              "total": 5,
+              "avg": 0.38
+            }
+          },
+          {
+            "player": {
+              "id": 37006,
+              "name": "Eduardo Vargas"
+            },
+            "statistics": {
+              "total": 4,
+              "avg": 0.36
+            }
+          },
+          {
+            "player": {
+              "id": 559036,
+              "name": "Gustavo Scarpa"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.19
+            }
+          },
+          {
+            "player": {
+              "id": 859970,
+              "name": "Matías Zaracho"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.18
+            }
+          }
+        ],
+        "topShooters": [
+          {
+            "player": {
+              "id": 34705,
+              "name": "Hulk"
+            },
+            "statistics": {
+              "total": 48,
+              "avg": 3.69
+            }
+          },
+          {
+            "player": {
+              "id": 559036,
+              "name": "Gustavo Scarpa"
+            },
+            "statistics": {
+              "total": 39,
+              "avg": 2.44
+            }
+          },
+          {
+            "player": {
+              "id": 885179,
+              "name": "Paulinho"
+            },
+            "statistics": {
+              "total": 26,
+              "avg": 1.63
+            }
+          },
+          {
+            "player": {
+              "id": 1471221,
+              "name": "Alisson"
+            },
+            "statistics": {
+              "total": 15,
+              "avg": 1.67
+            }
+          },
+          {
+            "player": {
+              "id": 37006,
+              "name": "Eduardo Vargas"
+            },
+            "statistics": {
+              "total": 15,
+              "avg": 1.36
+            }
+          }
+        ],
+        "topYellowCards": [
+          {
+            "player": {
+              "id": 559036,
+              "name": "Gustavo Scarpa"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.19
+            }
+          },
+          {
+            "player": {
+              "id": 1127439,
+              "name": "Guilherme Arana"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.38
+            }
+          },
+          {
+            "player": {
+              "id": 973737,
+              "name": "Bruno Fuchs"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.25
+            }
+          },
+          {
+            "player": {
+              "id": 913598,
+              "name": "Igor Gomes"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.27
+            }
+          },
+          {
+            "player": {
+              "id": 822729,
+              "name": "Alan Franco"
+            },
+            "statistics": {
+              "total": 3,
+              "avg": 0.3
+            }
+          }
+        ],
+        "topRedCards": [
+          {
+            "player": {
+              "id": 158257,
+              "name": "Rodrigo Battaglia"
+            },
+            "statistics": {
+              "total": 2,
+              "avg": 0.15
+            }
+          },
+          {
+            "player": {
+              "id": 34705,
+              "name": "Hulk"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.08
+            }
+          },
+          {
+            "player": {
+              "id": 973737,
+              "name": "Bruno Fuchs"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.08
+            }
+          },
+          {
+            "player": {
+              "id": 885179,
+              "name": "Paulinho"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.06
+            }
+          },
+          {
+            "player": {
+              "id": 1117102,
+              "name": "Rômulo"
+            },
+            "statistics": {
+              "total": 1,
+              "avg": 0.13
+            }
+          }
+        ]
+      }
+    },
+    "injuries": []
+  },
+  "predictions": {
+    "apiFootball": {
+      "comment": null,
+      "home": {
+        "team": {
+          "id": 1967,
+          "name": "Athletico",
+          "code": "CAP",
+          "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+        },
+        "percent": "33%"
+      },
+      "away": {
+        "team": {
+          "id": 1977,
+          "name": "Atlético Mineiro",
+          "code": "ATL",
+          "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+        },
+        "percent": "33%"
+      },
+      "draw": {
+        "percent": "33%"
+      }
+    },
+    "ufmg": {
+      "away": {
+        "team": {
+          "id": 1977,
+          "name": "Atlético Mineiro",
+          "code": "ATL",
+          "logo": "https://www.sofascore.com/api/v1/team/1977/image"
+        },
+        "percent": "34.71%"
+      },
+      "home": {
+        "team": {
+          "id": 1967,
+          "name": "Athletico",
+          "code": "CAP",
+          "logo": "https://www.sofascore.com/api/v1/team/1967/image"
+        },
+        "percent": "28.07%"
+      },
+      "draw": {
+        "percent": "37.22%"
+      }
+    }
+  }
+}

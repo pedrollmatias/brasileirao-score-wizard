@@ -1,15 +1,12 @@
 import axios, { AxiosError, AxiosInstance } from "axios";
+import { ApiFootballLeagueEnum } from "../api-football/api-football";
 
-export enum TournamentEnum {
+export enum SofascoreTournamentEnum {
   BRASILEIRAO_SERIE_A = 325,
 }
 
-export enum SeasonEnum {
+export enum SofascoreSeasonEnum {
   SEASON_2024 = "58766",
-}
-
-export enum TeamEnum {
-  CRUZEIRO = "1954",
 }
 
 export class ApiSofascore {
@@ -23,7 +20,11 @@ export class ApiSofascore {
     this.client = client;
   }
 
-  async getTournament({ tournamentId }: { tournamentId: TournamentEnum }) {
+  async getTournament({
+    tournamentId,
+  }: {
+    tournamentId: SofascoreTournamentEnum;
+  }) {
     const url = `unique-tournament/${tournamentId}`;
     const { data } = await this.client.get(url);
 
@@ -34,8 +35,8 @@ export class ApiSofascore {
     tournamentId,
     seasonId,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
   }) {
     const url = `unique-tournament/${tournamentId}/season/${seasonId}/teams`;
     const { data } = await this.client.get(url);
@@ -47,8 +48,8 @@ export class ApiSofascore {
     tournamentId,
     seasonId,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
   }) {
     const url = `unique-tournament/${tournamentId}/season/${seasonId}/standings/total`;
     const { data } = await this.client.get(url);
@@ -60,8 +61,8 @@ export class ApiSofascore {
     tournamentId,
     seasonId,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
   }) {
     const url = `unique-tournament/${tournamentId}/season/${seasonId}/rounds`;
     const { data } = await this.client.get(url);
@@ -73,8 +74,8 @@ export class ApiSofascore {
     tournamentId,
     seasonId,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
   }) {
     let currentPage = 0;
     let hasNextPage = true;
@@ -115,6 +116,17 @@ export class ApiSofascore {
     }
   }
 
+  async getEventLineups({ eventId }: { eventId: string }) {
+    try {
+      const url = `event/${eventId}/lineups`;
+      const { data } = await this.client.get(url);
+
+      return data;
+    } catch (error) {
+      return this.handleNotFoundError(error as AxiosError);
+    }
+  }
+
   async getPlayerStatisticsByEvent({
     eventId,
     playerId,
@@ -137,8 +149,8 @@ export class ApiSofascore {
     seasonId,
     playerId,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
     playerId: string;
   }) {
     const url = `player/${playerId}/unique-tournament/${tournamentId}/season/${seasonId}/statistics/overall`;
@@ -152,8 +164,8 @@ export class ApiSofascore {
     seasonId,
     teamId,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
     teamId: string;
   }) {
     const url = `team/${teamId}/unique-tournament/${tournamentId}/season/${seasonId}/statistics/overall`;
@@ -167,8 +179,8 @@ export class ApiSofascore {
     seasonId,
     teamId,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
     teamId: string;
   }) {
     const url = `team/${teamId}/unique-tournament/${tournamentId}/season/${seasonId}/top-players/overall`;
@@ -184,13 +196,24 @@ export class ApiSofascore {
     return data;
   }
 
+  async getTeamImage({ teamId }: { teamId: string }) {
+    const url = `team/${teamId}/image`;
+    const { data } = await this.client.get(url);
+
+    return data;
+  }
+
+  getTeamImageUrl({ teamId }: { teamId: string }) {
+    return `${this.client.getUri()}team/${teamId}/image`;
+  }
+
   async getRoundEvents({
     tournamentId,
     seasonId,
     round,
   }: {
-    tournamentId: TournamentEnum;
-    seasonId: SeasonEnum;
+    tournamentId: SofascoreTournamentEnum;
+    seasonId: SofascoreSeasonEnum;
     round: number;
   }) {
     const url = `unique-tournament/${tournamentId}/season/${seasonId}/events/round/${round}`;
@@ -210,5 +233,22 @@ export class ApiSofascore {
     }
 
     throw error;
+  }
+
+  static toApiFootballLeagueId(tournamentId: SofascoreTournamentEnum) {
+    const map = {
+      [SofascoreTournamentEnum.BRASILEIRAO_SERIE_A]:
+        ApiFootballLeagueEnum.BRASILEIRAO_SERIE_A,
+    };
+
+    return map[tournamentId];
+  }
+
+  static toApiFootbalSeason(seasonId: SofascoreSeasonEnum) {
+    const map = {
+      [SofascoreSeasonEnum.SEASON_2024]: 2024,
+    };
+
+    return map[seasonId];
   }
 }

@@ -1,33 +1,16 @@
 import {
   ApiSofascore,
-  SeasonEnum,
-  TournamentEnum,
+  SofascoreSeasonEnum,
+  SofascoreTournamentEnum,
 } from "../infra/api-sofascore/api-sofascore";
-import { ITeam } from "./domain.types";
-
-export interface ITeamStanding {
-  rank: number;
-  team: ITeam;
-  points: number;
-  played: number;
-  wins: number;
-  draws: number;
-  losses: number;
-  goals: {
-    for: number;
-    against: number;
-    difference: number;
-  };
-  lastMatches?: string[];
-  efficiency: number;
-}
+import { ITeamStanding } from "./domain.types";
 
 export const getStanding = async ({
   tournamentId,
   seasonId,
 }: {
-  tournamentId: TournamentEnum;
-  seasonId: SeasonEnum;
+  tournamentId: SofascoreTournamentEnum;
+  seasonId: SofascoreSeasonEnum;
 }): Promise<ITeamStanding[]> => {
   const sofascoreClient = new ApiSofascore();
 
@@ -48,6 +31,7 @@ export const getStanding = async ({
       team: {
         id: team.team.id,
         name: team.team.name,
+        logo: sofascoreClient.getTeamImageUrl({ teamId: team.team.id }),
       },
       rank: team.position,
       points: team.points,

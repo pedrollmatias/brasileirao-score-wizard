@@ -1,38 +1,15 @@
 import { ApiSofascore } from "../infra/api-sofascore/api-sofascore";
 import { getRelevantStatsFromMatch } from "./controller.helpers";
-import { IPlayer, IPreviousRound, ITeam } from "./domain.types";
-import { ITeamTopPlayers } from "./get-team-statistics";
+import {
+  IMatchTopPlayersStatistics,
+  IPlayer,
+  IPreviousMatch,
+  IPreviousRound,
+  ITeam,
+  ITeamTopPlayers,
+} from "./domain.types";
 
 const lastMatchesToAnalise = Number(process.env.LAST_MATCHES_TO_ANALISE) || 5;
-
-export interface IMatchStatistic {
-  shots: { total: number; onTarget: number };
-  corners: number;
-  yellowCards: number;
-  redCards: number;
-  fouls: number;
-  ballPossession: number;
-}
-
-export interface IMatchTopPlayersStatistics {
-  topScorers: (IPlayer & { total: number })[];
-  topAssists: (IPlayer & { total: number })[];
-  topShooters: (IPlayer & { total: number; onTarget: number })[];
-  topYellowCards: (IPlayer & { total: number })[];
-  topRedCards: (IPlayer & { total: number })[];
-}
-
-export interface IAnalyzedMatch {
-  home: {
-    team: ITeam;
-    statistics: IMatchStatistic;
-  };
-  away: {
-    team: ITeam;
-    statistics: IMatchStatistic;
-  };
-  topPlayers: IMatchTopPlayersStatistics;
-}
 
 export const getPreviousMatchesStatistics = async ({
   previousRoundsMatches,
@@ -42,7 +19,7 @@ export const getPreviousMatchesStatistics = async ({
   previousRoundsMatches: IPreviousRound[];
   team: ITeam;
   topPlayers: ITeamTopPlayers;
-}) => {
+}): Promise<IPreviousMatch[]> => {
   const sofascoreApi = new ApiSofascore();
 
   const previousMatchesToAnalise = previousRoundsMatches
@@ -57,7 +34,7 @@ export const getPreviousMatchesStatistics = async ({
   const { topShooters, topAssists, topRedCards, topScorers, topYellowCards } =
     topPlayers;
 
-  let previousMatchesAnalyzed: IAnalyzedMatch[] = [];
+  let previousMatches: IPreviousMatch[] = [];
 
   for (const match of previousMatchesToAnalise) {
     const eventStats = await sofascoreApi.getEventStatistics({
@@ -115,7 +92,7 @@ export const getPreviousMatchesStatistics = async ({
           };
         })
       )
-    ).filter((player) => player !== undefined);
+    ).filter((player) => player !== undefined && player.total > 0);
 
     const topAssistsStats = (
       await Promise.all(
@@ -139,7 +116,7 @@ export const getPreviousMatchesStatistics = async ({
           };
         })
       )
-    ).filter((player) => player !== undefined);
+    ).filter((player) => player !== undefined && player.total > 0);
 
     const topShootersStats = (
       await Promise.all(
@@ -171,7 +148,10 @@ export const getPreviousMatchesStatistics = async ({
           };
         })
       )
-    ).filter((player) => player !== undefined);
+    ).filter(
+      (player) =>
+        player !== undefined && (player.total > 0 || player.onTarget > 0)
+    );
 
     const topYellowCardsStats = (
       await Promise.all(
@@ -195,7 +175,7 @@ export const getPreviousMatchesStatistics = async ({
           };
         })
       )
-    ).filter((player) => player !== undefined);
+    ).filter((player) => player !== undefined && player.total > 0);
 
     const topRedCardsStats = (
       await Promise.all(
@@ -219,29 +199,32 @@ export const getPreviousMatchesStatistics = async ({
           };
         })
       )
-    ).filter((player) => player !== undefined);
+    ).filter((player) => player !== undefined && player.total > 0);
 
-    previousMatchesAnalyzed = [
-      ...previousMatchesAnalyzed,
+    const teamMatchTopPlayers = {
+      topAssists: topAssistsStats,
+      topScorers: topScorersStats,
+      topShooters: topShootersStats,
+      topYellowCards: topYellowCardsStats,
+      topRedCards: topRedCardsStats,
+    } as IMatchTopPlayersStatistics;
+
+    previousMatches = [
+      ...previousMatches,
       {
+        round: match.round,
         home: {
           team: match.home,
-          statistics: homeMatchStats,
+          statistics: { goals: match.score.home, ...homeMatchStats },
         },
         away: {
           team: match.away,
-          statistics: awayMatchStats,
+          statistics: { goals: match.score.away, ...awayMatchStats },
         },
-        topPlayers: {
-          topAssists: topAssistsStats,
-          topScorers: topScorersStats,
-          topShooters: topShootersStats,
-          topYellowCards: topYellowCardsStats,
-          topRedCards: topRedCardsStats,
-        },
+        topPlayers: teamMatchTopPlayers,
       },
     ];
   }
 
-  return previousMatchesAnalyzed;
+  return previousMatches;
 };

@@ -1,3 +1,10 @@
+import { ApiFootball } from "../infra/api-football/api-football";
+import {
+  ApiSofascore,
+  SofascoreSeasonEnum,
+} from "../infra/api-sofascore/api-sofascore";
+import { IPreviousRound } from "./domain.types";
+
 export interface IRelevantEventStatistics {
   goals: {
     for: {
@@ -124,3 +131,35 @@ export const getRelevantStatsFromMatch = ({
     {} as IRelevantEventStatistics
   );
 };
+
+export const eventToFixture = async (eventId: string) => {
+  const sofascoreClient = new ApiSofascore();
+  const apiFootballClient = new ApiFootball();
+
+  const { event } = await sofascoreClient.getEventDeatils({ eventId });
+
+  const {
+    homeTeam,
+    tournament: {
+      uniqueTournament: { id: tournamentId },
+    },
+    season: { id: seasonId },
+    roundInfo: { round },
+  } = event;
+
+  const season = ApiSofascore.toApiFootbalSeason(seasonId);
+  const leagueId = ApiSofascore.toApiFootballLeagueId(tournamentId);
+
+  const apiFootballHomeTeam = await apiFootballClient.findTeam({
+    teamCode: homeTeam.nameCode,
+  });
+
+  return apiFootballClient.getMatch({
+    leagueId,
+    round,
+    season,
+    home: apiFootballHomeTeam,
+  });
+};
+
+export const seasonIdToNumber = (seasonId: SofascoreSeasonEnum) => {};

@@ -24,3 +24,12 @@ export const getAverageArr = (arr: number[], fractionDigits: number = 2) =>
 export const sumArr = (arr: number[]) => arr.reduce((a, b) => a + b, 0);
 export const getMinArr = (arr: number[]) => Math.min(...arr);
 export const getMaxArr = (arr: number[]) => Math.max(...arr);
+
+export const splitArrayIntoGroups = (array: any[], groupSize: number) => {
+  return array.reduce((acc, _, index) => {
+    if (index % groupSize === 0) {
+      acc.push(array.slice(index, index + groupSize));
+    }
+    return acc;
+  }, []);
+};

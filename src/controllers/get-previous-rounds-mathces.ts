@@ -1,6 +1,6 @@
 import {
-  TournamentEnum,
-  SeasonEnum,
+  SofascoreTournamentEnum,
+  SofascoreSeasonEnum,
   ApiSofascore,
 } from "../infra/api-sofascore/api-sofascore";
 import { IPreviousRound, ITeam } from "./domain.types";
@@ -15,8 +15,8 @@ export const getPreviousRoundMatches = async ({
   currentRound: number;
   away: ITeam;
   home: ITeam;
-  tournamentId: TournamentEnum;
-  seasonId: SeasonEnum;
+  tournamentId: SofascoreTournamentEnum;
+  seasonId: SofascoreSeasonEnum;
 }): Promise<IPreviousRound[]> => {
   const sofascoreClient = new ApiSofascore();
 
@@ -39,14 +39,25 @@ export const getPreviousRoundMatches = async ({
       return isPreviousRoundNumber && (isHomePresent || isAwayPresent);
     })
     .map((event: any) => {
+      const homeLogo = sofascoreClient.getTeamImageUrl({
+        teamId: event.homeTeam.id,
+      });
+      const awayLogo = sofascoreClient.getTeamImageUrl({
+        teamId: event.awayTeam.id,
+      });
+
       const round = event.roundInfo.round;
       const home: ITeam = {
         id: event.homeTeam.id,
         name: event.homeTeam.name,
+        code: event.homeTeam.nameCode,
+        logo: homeLogo,
       };
       const away: ITeam = {
         id: event.awayTeam.id,
         name: event.awayTeam.name,
+        code: event.awayTeam.nameCode,
+        logo: awayLogo,
       };
       const winner = getMatchResult({
         away,
@@ -66,7 +77,8 @@ export const getPreviousRoundMatches = async ({
         round,
         score,
       };
-    });
+    })
+    .sort((match1, match2) => match2.round - match1.round);
 };
 
 const getMatchResult = ({

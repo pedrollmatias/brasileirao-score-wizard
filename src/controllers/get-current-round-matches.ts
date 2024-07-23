@@ -1,50 +1,58 @@
 import {
   ApiSofascore,
-  SeasonEnum,
-  TournamentEnum,
+  SofascoreSeasonEnum,
+  SofascoreTournamentEnum,
 } from "../infra/api-sofascore/api-sofascore";
-import { IMatch } from "./domain.types";
-
-export type ICurrentRoundMatch = IMatch;
+import { IMatch, ITeam } from "./domain.types";
 
 export const getCurrentRoundMatches = async ({
+  round,
   tournamentId,
   seasonId,
 }: {
-  tournamentId: TournamentEnum;
-  seasonId: SeasonEnum;
+  round: number;
+  tournamentId: SofascoreTournamentEnum;
+  seasonId: SofascoreSeasonEnum;
 }): Promise<{
-  matches: ICurrentRoundMatch[];
+  matches: IMatch[];
   round: number;
 }> => {
   const sofascoreClient = new ApiSofascore();
 
-  const tournamentRoundsData = await sofascoreClient.getTournamentRounds({
-    tournamentId,
-    seasonId,
-  });
-
-  const {
-    currentRound: { round },
-  } = tournamentRoundsData;
-
   const tournamentEvents = await sofascoreClient.getRoundEvents({
     tournamentId,
     seasonId,
-    round,
+    round: round,
   });
 
-  const matches = tournamentEvents.map((event: any) => ({
-    id: event.id,
-    home: {
+  const matches = tournamentEvents.map((event: any) => {
+    const homeLogo = sofascoreClient.getTeamImageUrl({
+      teamId: event.homeTeam.id,
+    });
+    const awayLogo = sofascoreClient.getTeamImageUrl({
+      teamId: event.awayTeam.id,
+    });
+
+    const home: ITeam = {
       id: event.homeTeam.id,
       name: event.homeTeam.name,
-    },
-    away: {
+      code: event.homeTeam.nameCode,
+      logo: homeLogo,
+    };
+
+    const away: ITeam = {
       id: event.awayTeam.id,
       name: event.awayTeam.name,
-    },
-  }));
+      code: event.awayTeam.nameCode,
+      logo: awayLogo,
+    };
+
+    return {
+      id: event.id,
+      home,
+      away,
+    };
+  });
 
   return { matches, round };
 };

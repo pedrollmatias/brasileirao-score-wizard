@@ -1,65 +1,22 @@
 import {
   ApiSofascore,
-  SeasonEnum,
-  TournamentEnum,
+  SofascoreSeasonEnum,
+  SofascoreTournamentEnum,
 } from "../infra/api-sofascore/api-sofascore";
 import { getAverageArr, getMaxArr, getMinArr, sumArr } from "../utils";
-import { getRelevantStatsFromMatch, IRelevantEventStatistics } from "./controller.helpers";
-import { IPlayer, IPreviousRound, ITeam } from "./domain.types";
+import {
+  getRelevantStatsFromMatch,
+  IRelevantEventStatistics,
+} from "./controller.helpers";
+import {
+  IPreviousRound,
+  ITeam,
+  ITeamTopPlayers,
+  ITeamStatistics,
+  ITopPlayerStatistics,
+} from "./domain.types";
 
 const topPlayersAmount = Number(process.env.TOP_PLAYERS_AMOUNT) || 5;
-
-interface IDataStatistics {
-  total: number;
-  avg: number;
-  min: number;
-  max: number;
-}
-
-interface ITopPlayerStatistics {
-  player: IPlayer;
-  statistics: {
-    total: number;
-    avg: number;
-  };
-}
-
-export interface ITeamTopPlayers {
-  topScorers: ITopPlayerStatistics[];
-  topAssists: ITopPlayerStatistics[];
-  topShooters: ITopPlayerStatistics[];
-  topYellowCards: ITopPlayerStatistics[];
-  topRedCards: ITopPlayerStatistics[];
-}
-
-export interface ITeamTournamentStatistics {
-  matches: number;
-  topPlayers: ITeamTopPlayers;
-  goals: {
-    for: {
-      total: { home: number; away: number; total: number };
-      avg: { home: number; away: number; total: number };
-      max: { home: number; away: number; total: number };
-    };
-    against: {
-      total: { home: number; away: number; total: number };
-      avg: { home: number; away: number; total: number };
-      max: { home: number; away: number; total: number };
-    };
-  };
-  shots: {
-    // offTarget: IDataStatistics;
-    onTarget: IDataStatistics;
-    total: IDataStatistics;
-  };
-  passes: IDataStatistics;
-  offsides: IDataStatistics;
-  corners: IDataStatistics;
-  fouls: IDataStatistics;
-  yellowCards: IDataStatistics;
-  redCards: IDataStatistics;
-  ballPossession: IDataStatistics;
-}
 
 export const getTeamTournamentStatistics = async ({
   previousMatches,
@@ -69,8 +26,8 @@ export const getTeamTournamentStatistics = async ({
 }: {
   previousMatches: IPreviousRound[];
   team: ITeam;
-  tournamentId: TournamentEnum;
-  seasonId: SeasonEnum;
+  tournamentId: SofascoreTournamentEnum;
+  seasonId: SofascoreSeasonEnum;
 }) => {
   const sofascoreClient = new ApiSofascore();
 
@@ -134,7 +91,7 @@ export const getTeamTournamentStatistics = async ({
     yellowCardsValues,
   } = getStatisticsValuesByType(previousTeamEventsStatistics);
 
-  const data: ITeamTournamentStatistics = {
+  const data: ITeamStatistics = {
     matches,
     goals: {
       for: {
@@ -251,7 +208,7 @@ const getTeamTopPlayers = (
     },
     statistics: {
       total: statistics[paramName],
-      avg: statistics[paramName] / statistics.appearances,
+      avg: Number((statistics[paramName] / statistics.appearances).toFixed(2)),
     },
   });
 

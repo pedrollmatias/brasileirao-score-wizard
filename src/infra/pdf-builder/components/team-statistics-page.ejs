@@ -1,0 +1,463 @@
+<div class="page">
+  <div class="d-flex justify-content-between align-items-center h-100 mb-3">
+    <h5 class="mb-0">
+      <strong>
+        <%= section %>. Estatísticas da temporada - <%= team.name %>
+      </strong>
+    </h5>
+
+    <img class="team-logo" src="<%= team.logo %>" alt="<%= team.name %>" />
+  </div>
+
+  <p>Lorem ipsum</p>
+
+  <!-- Gols -->
+  <div class="no-page-break">
+    <h6><strong> Estatísticas de gols </strong></h6>
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Mandante</th>
+          <th>Visitante</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gols pro</td>
+          <td><%= statistics.goals.for.total.home %></td>
+          <td><%= statistics.goals.for.total.away %></td>
+          <td><%= statistics.goals.for.total.total %></td>
+        </tr>
+
+        <tr>
+          <td>Média de gols pro</td>
+          <td><%= statistics.goals.for.avg.home %></td>
+          <td><%= statistics.goals.for.avg.away %></td>
+          <td><%= statistics.goals.for.avg.total %></td>
+        </tr>
+
+        <tr>
+          <td>Máximo de gols pro por partida</td>
+          <td><%= statistics.goals.for.max.home %></td>
+          <td><%= statistics.goals.for.max.away %></td>
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>Gols sofridos</td>
+          <td><%= statistics.goals.against.total.home %></td>
+          <td><%= statistics.goals.against.total.away %></td>
+          <td><%= statistics.goals.against.total.total %></td>
+        </tr>
+
+        <tr>
+          <td>Média de gols sofridos</td>
+          <td><%= statistics.goals.against.avg.home %></td>
+          <td><%= statistics.goals.against.avg.away %></td>
+          <td><%= statistics.goals.against.avg.total %></td>
+        </tr>
+
+        <tr>
+          <td>Máximo de gols sofridos por partida</td>
+          <td><%= statistics.goals.against.max.home %></td>
+          <td><%= statistics.goals.against.max.away %></td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Finalizações -->
+  <div class="no-page-break">
+    <h6><strong> Estatísticas de finalizações </strong></h6>
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Média</th>
+          <th>Mínimo/partida</th>
+          <th>Máximo/partida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Finalizações</td>
+          <td><%= statistics.shots.total.avg %></td>
+          <td><%= statistics.shots.total.min %></td>
+          <td><%= statistics.shots.total.max %></td>
+        </tr>
+
+        <tr>
+          <td>Finalizações no gol</td>
+          <td><%= statistics.shots.onTarget.avg %></td>
+          <td><%= statistics.shots.onTarget.min %></td>
+          <td><%= statistics.shots.onTarget.max %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Estatísticas gerais -->
+  <div class="no-page-break">
+    <h6><strong> Estatísticas gerais </strong></h6>
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Média</th>
+          <th>Mínimo/partida</th>
+          <th>Máximo/partida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Passes</td>
+          <td><%= statistics.passes.avg %></td>
+          <td><%= statistics.passes.min %></td>
+          <td><%= statistics.passes.max %></td>
+        </tr>
+
+        <tr>
+          <td>Escanteios</td>
+          <td><%= statistics.corners.avg %></td>
+          <td><%= statistics.corners.min %></td>
+          <td><%= statistics.corners.max %></td>
+        </tr>
+
+        <tr>
+          <td>Impedimentos</td>
+          <td><%= statistics.offsides.avg %></td>
+          <td><%= statistics.offsides.min %></td>
+          <td><%= statistics.offsides.max %></td>
+        </tr>
+
+        <tr>
+          <td>Faltas</td>
+          <td><%= statistics.fouls.avg %></td>
+          <td><%= statistics.fouls.min %></td>
+          <td><%= statistics.fouls.max %></td>
+        </tr>
+
+        <tr>
+          <td>Cartões amarelos</td>
+          <td><%= statistics.yellowCards.avg %></td>
+          <td><%= statistics.yellowCards.min %></td>
+          <td><%= statistics.yellowCards.max %></td>
+        </tr>
+
+        <tr>
+          <td>Cartões vermelhos</td>
+          <td><%= statistics.redCards.avg %></td>
+          <td><%= statistics.redCards.min %></td>
+          <td><%= statistics.redCards.max %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Artilheiros -->
+  <div class="mb-3 no-page-break">
+    <div class="d-flex justify-content-between align-items-center h-100 mb-3">
+      <h6 class="mb-0">
+        <strong> Principais jogadores na temporada</strong>
+      </h6>
+
+      <img class="team-logo" src="<%= team.logo %>" alt="<%= team.name %>" />
+    </div>
+
+    <strong class="mb-2">Artilheiros</strong>
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Total de gols</th>
+          <th>Média por partida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% statistics.topPlayers.topScorers.forEach(player => { %>
+        <tr>
+          <td><%= player.player.name %></td>
+          <td><%= player.statistics.total %></td>
+          <td><%= player.statistics.avg %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Assistências -->
+  <div class="mb-3 no-page-break">
+    <strong class="mb-2">Assistências</strong>
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Total de assistências</th>
+          <th>Média por partida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% statistics.topPlayers.topAssists.forEach(player => { %>
+        <tr>
+          <td><%= player.player.name %></td>
+          <td><%= player.statistics.total %></td>
+          <td><%= player.statistics.avg %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Finalizadores -->
+  <div class="mb-3 no-page-break">
+    <strong class="mb-2">Finalizadores</strong>
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Total de chutes</th>
+          <th>Média por partida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% statistics.topPlayers.topShooters.forEach(player => { %>
+        <tr>
+          <td><%= player.player.name %></td>
+          <td><%= player.statistics.total %></td>
+          <td><%= player.statistics.avg %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Cartões amarelos -->
+  <div class="mb-3 no-page-break">
+    <strong class="mb-2">Cartões amarelos</strong>
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Total de cartões amarelos</th>
+          <th>Média por partida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% statistics.topPlayers.topYellowCards.forEach(player => { %>
+        <tr>
+          <td><%= player.player.name %></td>
+          <td><%= player.statistics.total %></td>
+          <td><%= player.statistics.avg %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Últimas partidas -->
+<% previousMatches.forEach((match, index) => { %>
+<div class="page">
+  <div class="no-page-break">
+    <% if (index === 0) { %>
+    <h6 class="mb-3"><strong> Últimas partidas </strong></h6>
+    <% } %>
+
+    <div class="d-flex justify-content-center align-items-center mb-2">
+      <img
+        class="team-logo-sm me-2"
+        src="<%= match.home.team.logo %>"
+        alt="<%= match.home.team.name %>"
+      />
+      <h6 class="m-0">
+        <strong><%= match.home.team.name %> </strong> x
+        <strong> <%= match.away.team.name %></strong>
+      </h6>
+      <img
+        class="team-logo-sm ms-2"
+        src="<%= match.away.team.logo %>"
+        alt="<%= match.away.team.name %>"
+      />
+      <h6 class="m-0 ps-1">
+        <strong>- Rodada <%= match.round %></strong>
+      </h6>
+    </div>
+
+    <table class="table table-xs table-bordered">
+      <thead>
+        <tr>
+          <th>Estatística</th>
+          <th><%= match.home.team.name %></th>
+          <th><%= match.away.team.name %></th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gols</td>
+          <td><%= match.home.statistics.goals %></td>
+          <td><%= match.away.statistics.goals %></td>
+          <td>
+            <%= match.home.statistics.goals + match.away.statistics.goals %>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Posse de bola</td>
+          <td><%= match.home.statistics.ballPossession %>%</td>
+          <td><%= match.away.statistics.ballPossession %>%</td>
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>Finalizações (Chutes ao gol)</td>
+          <td>
+            <%= match.home.statistics.totalShots %> (<%=
+            match.home.statistics.shotsOnTarget %>)
+          </td>
+          <td>
+            <%= match.away.statistics.totalShots %> (<%=
+            match.away.statistics.shotsOnTarget %>)
+          </td>
+          <td>
+            <%= match.home.statistics.totalShots +
+            match.away.statistics.totalShots %> (<%=
+            match.home.statistics.shotsOnTarget +
+            match.away.statistics.shotsOnTarget %>)
+          </td>
+        </tr>
+
+        <tr>
+          <td>Escanteios</td>
+          <td><%= match.home.statistics.corners %></td>
+          <td><%= match.away.statistics.corners %></td>
+          <td>
+            <%= match.home.statistics.corners + match.away.statistics.corners %>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Passes</td>
+          <td><%= match.home.statistics.passes %></td>
+          <td><%= match.away.statistics.passes %></td>
+          <td>
+            <%= match.home.statistics.passes + match.away.statistics.passes %>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Impedimentos</td>
+          <td><%= match.home.statistics.offsides %></td>
+          <td><%= match.away.statistics.offsides %></td>
+          <td>
+            <%= match.home.statistics.offsides + match.away.statistics.offsides
+            %>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Faltas</td>
+          <td><%= match.home.statistics.fouls %></td>
+          <td><%= match.away.statistics.fouls %></td>
+          <td>
+            <%= match.home.statistics.fouls + match.away.statistics.fouls %>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Cartões amarelos</td>
+          <td><%= match.home.statistics.yellowCards %></td>
+          <td><%= match.away.statistics.yellowCards %></td>
+          <td>
+            <%= match.home.statistics.yellowCards +
+            match.away.statistics.yellowCards %>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Cartões vermelhos</td>
+          <td><%= match.home.statistics.redCards %></td>
+          <td><%= match.away.statistics.redCards %></td>
+          <td>
+            <%= match.home.statistics.redCards + match.away.statistics.redCards
+            %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Performance principais jogadores -->
+  <span class="mb-2">Performance dos principais jogadores</span>
+  <div class="no-page-break">
+    <table class="table table-xs table-bordered">
+      <tbody>
+        <!-- Gols -->
+        <% if (match.topPlayers.topScorers.length) { %>
+        <div class="no-page-break">
+          <tr>
+            <th class="text-center" colspan="3">Gols</th>
+          </tr>
+          <% match.topPlayers.topScorers.forEach(player => { %>
+          <tr>
+            <td><%= player.name %></td>
+            <td><%= player.total %></td>
+          </tr>
+          <% }) %>
+        </div>
+        <% } %>
+
+        <!-- Assistências -->
+        <% if (match.topPlayers.topAssists.length) { %>
+        <div class="no-page-break">
+          <tr>
+            <th class="text-center" colspan="3">Assistências</th>
+          </tr>
+          <% match.topPlayers.topAssists.forEach(player => { %>
+          <tr>
+            <td><%= player.name %></td>
+            <td><%= player.total %></td>
+          </tr>
+          <% }) %>
+        </div>
+        <% } %>
+
+        <!-- Finalizações/Chutes ao gol -->
+        <% if (match.topPlayers.topShooters.length) { %>
+        <div class="no-page-break">
+          <tr>
+            <th class="text-center" colspan="3">
+              Finalizações (Chutes ao gol)
+            </th>
+          </tr>
+          <% match.topPlayers.topShooters.forEach(player => { %>
+          <tr>
+            <td><%= player.name %></td>
+            <td><%= player.total %> (<%= player.onTarget %>)</td>
+          </tr>
+          <% }) %>
+        </div>
+        <% } %>
+
+        <!-- Cartões amarelos -->
+        <% if (match.topPlayers.topYellowCards.length) { %>
+        <div class="no-page-break">
+          <tr>
+            <th class="text-center" colspan="3">Cartões amarelos</th>
+          </tr>
+          <% match.topPlayers.topYellowCards.forEach(player => { %>
+          <tr>
+            <td><%= player.name %></td>
+            <td><%= player.total %></td>
+          </tr>
+          <% }) %>
+        </div>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<% }) %>
